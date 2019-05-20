@@ -1,0 +1,50 @@
+// Flexbox
+%wrap {
+  flex-wrap: wrap;
+}
+
+%row {
+  flex-direction: row;
+}
+
+%column {
+  flex-direction: column;
+}
+
+// Centered
+%centerer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%centerer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+// Title
+%title {
+  text-transform: uppercase;
+  margin-bottom: 145px;
+  & > p {
+    padding-left: 15px;
+    line-height: 26px;
+    max-width: 890px;
+  }
+  & > h2 {
+    padding-right: 20px;
+    min-width: 185px;
+  }
+}
+// Margin
+%margin-small {
+  margin: $margin-small;
+}
+%margin-base {
+  margin: $margin-base;
+}
+%margin-large {
+  margin: $margin-large;
+}

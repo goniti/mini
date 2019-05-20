@@ -1,0 +1,90 @@
+// Wrapper Pricing
+.wrapper__pricing {
+  @include wrapper(6.5em, 100px);
+}
+
+// Pricing
+.pricing__description {
+  width: 17%;
+  padding-top: 21px;
+  margin-left: 6.5em;
+  & > h3 {
+    padding: 30px 0 20px 0;
+  }
+}
+.content__pricing {
+  width: 50em;
+  margin: 0 45px;
+}
+// Tables
+.pricing {
+  &__tables {
+    text-align: center;
+  }
+  &__item {
+    margin-top: 15px;
+    border: 1px solid $grey-divider;
+    & * li {
+      border-bottom: 1px solid $grey-divider;
+      & > span {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 0px;
+        color: $black;
+        text-transform: uppercase;
+      }
+      &:not(:first-child):not(:last-child) {
+        padding: 11.5px 0;
+        font-size: 15px;
+      }
+    }
+    & > ul > li:nth-child(2),
+    li:nth-child(4),
+    li:last-child {
+      background-color: #fafafa;
+    }
+    & > ul > :first-child {
+      padding: 21px 0;
+    }
+    & > ul > :last-child {
+      padding: 33px 54px;
+    }
+    //--Price Basic
+    &--basic {
+      @extend .pricing__item;
+    }
+    //--Price Gold
+    &--gold {
+      @extend .pricing__item;
+      &-recommended {
+        @extend .pricing__item;
+        background-color: $orange;
+        padding-top: 26px;
+        margin: 0 -1px;
+        & > ul > li:nth-child(2),
+        li:nth-child(4),
+        li:last-child {
+          background-color: $grey-divider;
+        }
+        & > ul > li:nth-child(3),
+        li:nth-child(5) {
+          background-color: #f2f2f2;
+        }
+        & > * li > span {
+          color: #fff;
+        }
+        & hr {
+          background-color: #fff;
+        }
+      }
+    }
+    // Price Silver
+    &--silver {
+      @extend .pricing__item;
+    }
+  }
+  &__divider {
+    @include divider(2px, 50px, $orange);
+    border: 0px solid rgba(0, 0, 0, 0);
+  }
+}

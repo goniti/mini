@@ -1,0 +1,12 @@
+.logo-mini {
+  /*--- circle($size, $border, $color) ---*/
+  @include circle(145px, 2px #ffffff, $transparent);
+  font-size: 45px;
+  font-weight: 700;
+  font-family: Montserrat, sans-serif;
+  &:hover {
+    @include circle(145px, 2px $black, $transparent);
+    @include transition-duration(0.7s);
+    color: $black;
+  }
+}

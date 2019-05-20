@@ -1,0 +1,77 @@
+// Wrapper Team
+.wrapper__team {
+  @include wrapper(6.3em, 5.4em);
+}
+// Content Team
+.content__team {
+  width: 77.5em;
+}
+.team {
+  &__columns {
+    @include column-count(4);
+    margin-left: 50px;
+    text-align: center;
+  }
+  &__column {
+    padding-left: 15px;
+    border-top: solid 4px $transparent;
+    &:hover {
+      background-color: #f0f0f0;
+      border-top: solid 4px $orange;
+      .team__divider {
+        @include divider(2px, 20px, red);
+      }
+      .team__column--picture {
+        @include grayscale(100%);
+      }
+    }
+    &--picture {
+      @include grayscale(0);
+      transition: all 200ms ease-in-out;
+      @include circle(200px, $grey-divider 1px, #e9e9e9);
+      @include shadowGrey;
+      margin: 25px auto;
+    }
+    & > span {
+      font-size: 15px;
+      font-family: "Lato", sans-serif;
+      color: #999999;
+    }
+    & > p {
+      max-width: 15em;
+      margin: 0 auto;
+    }
+  }
+  &__divider {
+    @include divider(2px, 20px, $grey-divider);
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+}
+
+// Social
+.social__team {
+  padding: 18px 0 30px 0;
+  margin-left: 55px;
+  &--icons {
+    width: 13.5vw;
+  }
+}
+.svg-inline--fa {
+  cursor: pointer;
+  height: 1.2em;
+  &.fa-w-9 {
+    width: 1.8em;
+  }
+  &.fa-w-14 {
+    width: 2.4em;
+  }
+  &.fa-w-16 {
+    width: 2.1em;
+  }
+  &.fa-w-20 {
+    width: 2em;
+  }
+  &:hover {
+    color: $orange;
+  }
+}

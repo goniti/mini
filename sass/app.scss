@@ -1,0 +1,39 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass";
+
+// Reset
+@import "compass/reset";
+
+// Helpers
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/placeholders";
+
+/* Layouts*/
+@import "layouts/grid";
+@import "layouts/responsive";
+
+// Base
+@import "base/base";
+
+// Components
+@import "components/btn";
+@import "components/icons";
+@import "components/logo";
+@import "components/progressbar";
+@import "components/section";
+@import "components/title";
+@import "components/iphone-8";
+@import "components/ipad-pro";
+
+// Pages
+@import "pages/about";
+@import "pages/main";
+@import "pages/pricing";
+@import "pages/quote";
+@import "pages/service";
+@import "pages/stats";
+@import "pages/team";

@@ -1,0 +1,37 @@
+// Wrapper Stats
+.wrapper__stats {
+  @include wrapper(11.85em, 14.4em);
+}
+// Content Stats
+.content__stats {
+  width: 82em;
+}
+.stats {
+  &__columns {
+    @include column-count(4);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+  &__column {
+    &:hover {
+      .icons__circle--large {
+        @include circle(165px, 2px #fff, $transparent);
+        & i {
+          @include filter(68%, 24%, 2634%, 353deg, 98%, 94%);
+        }
+      }
+    }
+    & * i {
+      @include filter(100%, 100%, 0%, 35deg, 104%, 107%);
+    }
+  }
+  &__count {
+    font-size: 45px;
+    line-height: 0.7;
+    padding-top: 30px;
+  }
+  &__name {
+    font-size: 25px;
+  }
+}

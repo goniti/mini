@@ -1,0 +1,94 @@
+/*---Wrapper About ---*/
+.wrapper__about {
+  &--part1 {
+    @include wrapper(6em, 6.8em);
+  }
+  &--part2 {
+    @include wrapper(7.70em, 6.75em);
+  }
+}
+
+/*---Content About---*/
+.content__about--inner {
+  margin-left: 67px;
+
+  &-right {
+    width: 45%;
+    margin-left: 65px;
+  }
+
+  &-left {
+    width: 44.5%;
+  }
+  & h3 {
+    padding-bottom: 18px;
+  }
+}
+
+.about {
+  &__text {
+    max-width: 505px;
+    padding-right: 60px;
+
+    &--skills {
+      max-width: 390px;
+    }
+
+    & > p {
+      &:nth-child(2) {
+        line-height: 29px;
+        font-weight: 300;
+        font-size: 20px;
+        color: $red;
+      }
+
+      &:nth-last-child(1) {
+        padding-top: 29px;
+
+        & > span {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  &__picture {
+    width: 450px;
+    height: 255px;
+
+    &--devices {
+      width: 497px;
+      height: 484px;
+      padding-right: 95px;
+    }
+  }
+
+  //Progress Bar width
+  &__progressbar {
+    margin-top: 4em;
+    width: 555px;
+  }
+}
+
+//Progress Bar
+.progressbar {
+  &__design {
+    @include progressPercentage(88%, 2.6em);
+  }
+
+  &__developement {
+    @include progressPercentage(76%, 2.6em);
+  }
+
+  &__wordpress {
+    @include progressPercentage(81%, 2.6em);
+  }
+
+  &__drupal {
+    @include progressPercentage(71%, 0);
+  }
+}
+
+h4 span {
+  font-weight: 400;
+}

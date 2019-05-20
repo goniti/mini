@@ -1,0 +1,206 @@
+// Wrapper
+@mixin wrapper($padding-top, $padding-bottom) {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+}
+// Icon
+@mixin icon($name, $size) {
+  $url: "../img/icon/SVG/#{$name}.svg";
+  background: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+  height: $size;
+  width: $size;
+}
+// Logo Circle
+@mixin circle($size, $border, $color) {
+  @extend %centerer;
+  @include border-radius(50%);
+  line-height: $size;
+  width: $size;
+  height: $size;
+  border: $border;
+  border-style: solid;
+  background-color: $color;
+}
+// Shadow Grey
+@mixin shadowGrey {
+  -moz-box-shadow: 0px 0px 5px 1px #cfcfcf;
+  -webkit-box-shadow: 0px 0px 5px 1px #cfcfcf;
+  -o-box-shadow: 0px 0px 5px 1px #cfcfcf;
+  box-shadow: 0px 0px 5px 2px #cfcfcf;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color=#cfcfcf, Direction=NaN, Strength=5);
+}
+// Grayscale
+@mixin grayscale($value) {
+  -webkit-filter: #{"grayscale(#{$value})"};
+  -moz-filter: #{"grayscale(#{$value})"};
+  filter: #{"grayscale(#{$value})"};
+}
+// FILTER color
+@mixin filter(
+  $invert-amount,
+  $sepia-amount,
+  $saturate-amount,
+  $hueRotate-amount,
+  $brightness-amount,
+  $contrast-amount
+) {
+  -webkit-filter: invert($invert-amount) sepia($sepia-amount) saturate($saturate-amount) hue-rotate($hueRotate-amount)
+    brightness($brightness-amount) contrast($contrast-amount);
+  -moz-filter: invert($invert-amount) sepia($sepia-amount) saturate($saturate-amount) hue-rotate($hueRotate-amount)
+    brightness($brightness-amount) contrast($contrast-amount);
+  -ms-filter: invert($invert-amount) sepia($sepia-amount) saturate($saturate-amount) hue-rotate($hueRotate-amount)
+    brightness($brightness-amount) contrast($contrast-amount);
+  -o-filter: invert($invert-amount) sepia($sepia-amount) saturate($saturate-amount) hue-rotate($hueRotate-amount)
+    brightness($brightness-amount) contrast($contrast-amount);
+  filter: invert($invert-amount) sepia($sepia-amount) saturate($saturate-amount) hue-rotate($hueRotate-amount)
+    brightness($brightness-amount) contrast($contrast-amount);
+}
+// Button
+@mixin btn($btn-padding, $btn-fontSize, $btn-color, $btn-bgColor) {
+  @extend %centerer;
+  padding: $btn-padding;
+  font-size: $btn-fontSize;
+  color: $btn-color;
+  background-color: $btn-bgColor;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+// Animation Button
+
+//--- Drawing effect
+@mixin btn-border-drawing(
+  $color: #ccc,
+  $hover: black,
+  $width: 2px,
+  $vertical: top,
+  $horizontal: left,
+  $duration: 0.25s
+) {
+  box-shadow: inset 0 0 0 $width $color;
+  color: $color;
+  transition: color $duration $duration/3;
+  position: relative;
+
+  &::before,
+  &::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    #{$vertical}: 0;
+    #{$horizontal}: 0;
+  }
+
+  &::before {
+    $h-side: if($horizontal == "left", "right", "left");
+
+    border-#{$vertical}-width: $width;
+    border-#{$h-side}-width: $width;
+  }
+
+  &::after {
+    $v-side: if($vertical == "top", "bottom", "top");
+
+    border-#{$v-side}-width: $width;
+    border-#{$horizontal}-width: $width;
+  }
+
+  &:hover {
+    color: $hover;
+    background: none;
+
+    &::before,
+    &::after {
+      border-color: $hover;
+
+      transition: border-color 0s, width $duration, height $duration;
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      transition-delay: 0s, 0s, $duration;
+    }
+
+    &::after {
+      transition-delay: 0s, $duration, 0s;
+    }
+  }
+}
+
+// Divider
+@mixin divider($height, $width, $bgColor) {
+  height: $height;
+  width: $width;
+  background-color: $bgColor;
+}
+
+// Angled Edge
+
+//---Angled Edge from Bottom
+@mixin angledEdge-bottom-UpperLeft {
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 100 95' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,95 100,95 100,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  height: 95px;
+  top: -95px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+//---Angled Edge from Top
+@mixin angledEdge-top-LowerRight {
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 100 95' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,0 100,0 0,95'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  height: 95px;
+  top: 0px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+// Progress Bar
+@mixin progressPercentage($progress, $padding-bottom) {
+  padding-bottom: $padding-bottom;
+
+  div.progressbar div {
+    width: $progress;
+    background: $orange;
+  }
+}
+
+// QUOTATION
+
+//--- marks RIGHT
+@mixin quotationRight {
+  font-size: 110px;
+  content: "\00201D";
+  position: absolute;
+  top: 16px;
+  right: -70px;
+}
+
+//--- marks LEFT
+@mixin quotationLeft {
+  font-size: 110px;
+  content: "\00201C";
+  position: absolute;
+  top: 16px;
+  left: -55px;
+}

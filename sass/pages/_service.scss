@@ -1,0 +1,28 @@
+// Wrapper Service
+.wrapper__service {
+  @include wrapper(6.1em, 5.6em);
+}
+// Content Service
+.content__service {
+  width: 78.5em;
+}
+.service {
+  &__columns {
+    @include column-count(3);
+    margin-left: 68px;
+    text-align: center;
+  }
+  &__column {
+    & > h3 {
+      padding: 30px 0 18px 0;
+    }
+    &:hover {
+      .icons__circle--small {
+        @include circle(100px, 2px $transparent, $orange);
+        & i {
+          @include filter(100%, 100%, 0%, 35deg, 104%, 107%);
+        }
+      }
+    }
+  }
+}

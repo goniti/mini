@@ -1,0 +1,62 @@
+// Spriting
+// @import "icon/*.png";
+// $icon-layout: smart;
+// @include all-icon-sprites(true);
+
+.icons {
+  &__circle--base {
+    @include circle(120px, 2px $orange, $transparent);
+  }
+  &__circle--small {
+    @include circle(100px, 2px $orange, $transparent);
+    margin: 0 auto;
+  }
+  &__circle--large {
+    @include circle(165px, 2px $orange, $transparent);
+    margin: 0 auto;
+  }
+  &__about{
+    margin-right: 30px;
+  }
+}
+
+.icon {
+  &-banknote {
+    @include icon("banknote", 1.95em);
+    @extend %margin-base;
+  }
+  &-bulb {
+    @include icon("bulb", 2.5em);
+  }
+  &-cup {
+    @include icon("cup", 2em);
+    @extend %margin-large;
+  }
+  &-lab {
+    @include icon("lab", 2em);
+    @extend %margin-small;
+  }
+  &-like {
+    @include icon("like", 2em);
+    @extend %margin-large;
+  }
+  &-params {
+    @include icon("params", 2em);
+  }
+  &-stack {
+    @include icon("stack", 2em);
+    @extend %margin-large;
+  }
+  &-star {
+    @include icon("star", 1.65em);
+    @extend %margin-small;
+  }
+  &-user {
+    @include icon("user", 2em);
+    @extend %margin-large;
+  }
+  &-world {
+    @include icon("world", 1.9em);
+    @extend %margin-small;
+  }
+}

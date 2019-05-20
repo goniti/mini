@@ -1,0 +1,77 @@
+  // 480-by-370-pixel resolution
+.device-ipad-pro {
+  margin-right: -125px;
+  height: 480px;
+  width: 370px;
+  position: relative;
+
+  .device-frame {
+    background: $device-silver-panel;
+    border-radius: 38px;
+    box-shadow: inset 0 0 0 1px $device-silver-dark, inset 0 0 0 3px $device-silver;
+    padding: 40px 38px;
+  }
+  .device-content {
+    border: 2px solid #222;
+    border-radius: 2px;
+    height: 24.6em;
+    width: 18.1em;
+  }
+
+  // Home button
+  .device-header {
+    border: 1px solid $device-silver-dark;
+    border-radius: 50%;
+    bottom: 15px;
+    height: 18px;
+    left: 50%;
+    margin-left: -10px;
+    position: absolute;
+    width: 18px;
+  }
+
+  .device-sensors {
+    background: #666;
+    border-radius: 50%;
+    height: 6px;
+    left: 50%;
+    margin-left: -2px;
+    position: absolute;
+    top: 18px;
+    width: 6px;
+  }
+
+  // Gold edition 
+  &.device-gold {
+    .device-frame {
+      box-shadow: inset 0 0 0 1px $device-gold-dark, inset 0 0 0 3px $device-gold;
+    }
+
+    .device-header {
+      border-color: $device-gold-dark;
+    }
+  }
+
+  // Rose Gold edition 
+  &.device-rosegold {
+    .device-frame {
+      box-shadow: inset 0 0 0 1px $device-rosegold-dark, inset 0 0 0 3px $device-rosegold;
+    }
+
+    .device-header {
+      border-color: $device-rosegold-dark;
+    }
+  }
+
+  // Space Gray edition 
+  &.device-spacegray {
+    .device-frame {
+      background: $device-spacegray-panel;
+      box-shadow: inset 0 0 0 1px $device-spacegray-dark, inset 0 0 0 3px $device-spacegray;
+    }
+
+    .device-header {
+      border-color: $device-spacegray-dark;
+    }
+  }
+}

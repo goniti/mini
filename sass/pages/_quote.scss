@@ -1,0 +1,36 @@
+// /*---Wrapper---*/
+.wrapper {
+  &__quote {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    @include wrapper(15.15em, 15.15em);
+  }
+}
+
+.quote {
+  &__text {
+    text-align: center;
+    font-size: 45px;
+    max-width: 960px;
+    line-height: 3.8rem;
+
+    &:before {
+      @include quotationLeft;
+    }
+
+    &:after {
+      @include quotationRight;
+    }
+  }
+
+  &__author {
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+  &__divider {
+    @include divider(2px, 50px, $orange);
+    margin: 32px 0 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+}

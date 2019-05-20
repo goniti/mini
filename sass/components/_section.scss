@@ -1,0 +1,48 @@
+section {
+  background-color: $white;
+  position: relative;
+}
+
+.section {
+  @each $section-large in $sections-large {
+    &__#{$section-large} {
+      &:before {
+        @include angledEdge-bottom-UpperLeft;
+      }
+    }
+  }
+
+  @each $section-small in $sections-small {
+    &__#{$section-small} {
+      &:before {
+        @include angledEdge-top-LowerRight;
+      }
+    }
+  }
+
+  &__quote {
+    padding-left: 3em;
+    margin-bottom: 1px;
+    background: url(../img/bg__section-01.jpg) center top fixed;
+    @include background-size(cover);
+  }
+  &__stats {
+    padding-left: 65px;
+    margin-bottom: 1px;
+    background: url(../img/bg__section-02.jpg) center top fixed;
+    @include background-size(cover);
+  }
+}
+/*---Divider---*/
+.divider {
+  &--grey {
+    background-color: $grey-divider;
+    height: 2px;
+    width: 1170px;
+    margin: 7px 0 0 70px;
+  }
+}
+.cb {
+  @include column-break(after, column);
+  opacity: 0;
+}
