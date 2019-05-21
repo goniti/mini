@@ -10,8 +10,8 @@
     @extend %column;
   }
   &__pricing {
-    display: flex;
-    justify-content: center;
+    @extend %center;
+    @extend %wrap;
   }
 }
 // Content
@@ -24,16 +24,15 @@
   }
   //---About--inner
   &__about--inner {
-    display: flex;
-    justify-content: center;
+    @extend %center;
+
     //---About--inner-right
     &-right {
       display: flex;
       @extend %wrap;
     }
     &-left {
-      display: flex;
-      justify-content: center;
+      @extend %center;
       align-items: flex-end;
     }
   }
@@ -53,17 +52,27 @@
 .icon {
   @extend %centerer;
 }
-// Quote
-.quote {
-  &__text {
-    position: relative;
-  }
-}
 // Team
-.social__team--icons {
-  display: flex;
+.team__columns {
+  @extend %center;
 }
+.social__team--icons {
+  @extend %centerer;
+}
+// Stats
+.stats__columns {
+  @extend %center;
+}
+
 // Pricing
-.pricing__tables {
-  @extend %centerer-right;
+.pricing {
+  &__tables {
+    //@extend %centerer-right;
+    @extend %centerer;
+
+    @extend %wrap;
+  }
+  &__item > ul > :last-child {
+    @extend %centerer;
+  }
 }

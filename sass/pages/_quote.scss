@@ -10,6 +10,7 @@
 
 .quote {
   &__text {
+    position: relative;
     text-align: center;
     font-size: 45px;
     max-width: 960px;

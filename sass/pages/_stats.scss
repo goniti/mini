@@ -1,19 +1,17 @@
 // Wrapper Stats
 .wrapper__stats {
-  @include wrapper(11.85em, 14.4em);
-}
-// Content Stats
-.content__stats {
-  width: 82em;
+  @include wrapper(11.55em, 14.4em);
 }
 .stats {
+  @include n-columns(75em, -0.25em, false, 4);
   &__columns {
-    @include column-count(4);
     text-align: center;
     color: white;
     font-weight: bold;
   }
   &__column {
+    padding: 0 82px;
+
     &:hover {
       .icons__circle--large {
         @include circle(165px, 2px #fff, $transparent);

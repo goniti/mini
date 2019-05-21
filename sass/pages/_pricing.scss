@@ -5,19 +5,24 @@
 
 // Pricing
 .pricing__description {
-  width: 17%;
-  padding-top: 21px;
-  margin-left: 6.5em;
+  //width: 17%;
+  padding-top: 18px;
+  //margin-left: 6.5em;
   & > h3 {
     padding: 30px 0 20px 0;
   }
 }
 .content__pricing {
-  width: 50em;
-  margin: 0 45px;
+  //width: 50em;
+  //margin: 0 45px;
+  margin-left: 115px;
 }
 // Tables
 .pricing {
+  &__description  {
+    max-width: 19.375rem;
+    margin-left: 60px;
+  }
   &__tables {
     text-align: center;
   }
