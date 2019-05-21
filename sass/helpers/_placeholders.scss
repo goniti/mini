@@ -10,7 +10,11 @@
 %column {
   flex-direction: column;
 }
-
+// Center
+%center {
+  display: flex;
+  justify-content: center;
+}
 // Centered
 %centerer {
   display: flex;

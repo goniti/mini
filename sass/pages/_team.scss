@@ -2,18 +2,14 @@
 .wrapper__team {
   @include wrapper(6.3em, 5.4em);
 }
-// Content Team
-.content__team {
-  width: 77.5em;
-}
 .team {
+  @include n-columns(75em, -4.25em, false, 4);
   &__columns {
-    @include column-count(4);
-    margin-left: 50px;
     text-align: center;
   }
   &__column {
-    padding-left: 15px;
+    padding: 0 30px;
+
     border-top: solid 4px $transparent;
     &:hover {
       background-color: #f0f0f0;
@@ -39,7 +35,6 @@
     }
     & > p {
       max-width: 15em;
-      margin: 0 auto;
     }
   }
   &__divider {
@@ -51,10 +46,6 @@
 // Social
 .social__team {
   padding: 18px 0 30px 0;
-  margin-left: 55px;
-  &--icons {
-    width: 13.5vw;
-  }
 }
 .svg-inline--fa {
   cursor: pointer;
