@@ -4,7 +4,7 @@
     @include wrapper(6em, 6.8em);
   }
   &--part2 {
-    @include wrapper(7.70em, 6.75em);
+    @include wrapper(7em, 6.75em);
   }
 }
 
@@ -20,7 +20,7 @@
   &-left {
     width: 44.5%;
   }
-  & h3 {
+  & h4 {
     padding-bottom: 18px;
   }
 }
@@ -89,6 +89,6 @@
   }
 }
 
-h4 span {
+h5 span {
   font-weight: 400;
 }

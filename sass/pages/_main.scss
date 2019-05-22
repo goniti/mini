@@ -55,20 +55,11 @@
     /* Hero__Content--inner */
     &--inner {
       & > p {
-        font-weight: 300;
-
-        &:first-child {
-          font-size: 45px;
-          line-height: 114px;
-          letter-spacing: -1px;
-        }
-
-        &:last-of-type {
-          padding-bottom: 55px;
-          font-size: 40px;
-          line-height: 112px;
-          letter-spacing: -2px;
-        }
+        padding-left: 30px;
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 35px;
+        letter-spacing: -4px;
       }
     }
   }

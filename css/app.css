@@ -91,7 +91,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 25, ../sass/helpers/_placeholders.scss */
-.title > h2 {
+.title > h3 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -109,7 +109,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   max-width: 890px;
 }
 /* line 40, ../sass/helpers/_placeholders.scss */
-.title > h2 {
+.title > h3 {
   padding-right: 20px;
   min-width: 185px;
 }
@@ -191,76 +191,70 @@ h6 {
 
 /* line 24, ../sass/base/_base.scss */
 h1 {
-  font-weight: 700;
+  font-weight: 300;
+  color: #fff;
+  line-height: 110px;
 }
 
 /* line 24, ../sass/base/_base.scss */
 h2 {
-  font-weight: 700;
+  font-weight: 300;
+  color: #fff;
+  line-height: 110px;
 }
 
-/* line 24, ../sass/base/_base.scss */
-h3 {
-  font-weight: 700;
-}
-
-/* line 30, ../sass/base/_base.scss */
-h5 {
-  font-weight: 700;
-}
-
-/* line 30, ../sass/base/_base.scss */
-h6 {
-  font-weight: 700;
+/* line 31, ../sass/base/_base.scss */
+h1 {
+  font-size: 45px;
+  letter-spacing: -1px;
 }
 
 /* line 36, ../sass/base/_base.scss */
 h2 {
-  color: #0d0d0d;
+  padding-bottom: 55px;
+  font-size: 40px;
+  letter-spacing: -2px;
 }
 
-/* line 36, ../sass/base/_base.scss */
+/* line 43, ../sass/base/_base.scss */
 h3 {
   color: #0d0d0d;
+  font-weight: 700;
 }
 
-/* line 36, ../sass/base/_base.scss */
+/* line 43, ../sass/base/_base.scss */
 h4 {
   color: #0d0d0d;
+  font-weight: 700;
 }
 
-/* line 36, ../sass/base/_base.scss */
+/* line 43, ../sass/base/_base.scss */
 h5 {
   color: #0d0d0d;
+  font-weight: 700;
 }
 
-/* line 36, ../sass/base/_base.scss */
+/* line 43, ../sass/base/_base.scss */
 h6 {
   color: #0d0d0d;
+  font-weight: 700;
 }
 
-/* line 41, ../sass/base/_base.scss */
-h1 {
-  font-size: 70px;
-  line-height: 29px;
-  letter-spacing: -4px;
-}
-
-/* line 47, ../sass/base/_base.scss */
-h2 {
+/* line 48, ../sass/base/_base.scss */
+h3 {
   font-size: 30px;
   line-height: 1.5em;
   border-right: 4px solid #f39c12;
 }
 
-/* line 53, ../sass/base/_base.scss */
-h3 {
+/* line 54, ../sass/base/_base.scss */
+h4 {
   font-size: 20px;
   line-height: 16px;
 }
 
 /* line 58, ../sass/base/_base.scss */
-h4 {
+h5 {
   font-weight: 600;
   font-size: 16px;
   line-height: 1em;
@@ -634,15 +628,19 @@ section {
 }
 
 /*---Divider---*/
-/* line 38, ../sass/components/_section.scss */
+/* line 37, ../sass/components/_section.scss */
+.divider {
+  margin-left: 70px;
+}
+/* line 39, ../sass/components/_section.scss */
 .divider--grey {
   background-color: #e6e6e6;
   height: 2px;
   width: 1170px;
-  margin: 7px 0 0 70px;
+  border: none;
 }
 
-/* line 45, ../sass/components/_section.scss */
+/* line 46, ../sass/components/_section.scss */
 .cb {
   -moz-page-break-after: column;
   -webkit-column-break-after: column;
@@ -878,7 +876,7 @@ section {
 }
 /* line 6, ../sass/pages/_about.scss */
 .wrapper__about--part2 {
-  padding-top: 7.7em;
+  padding-top: 7em;
   padding-bottom: 6.75em;
 }
 
@@ -897,7 +895,7 @@ section {
   width: 44.5%;
 }
 /* line 23, ../sass/pages/_about.scss */
-.content__about--inner h3 {
+.content__about--inner h4 {
   padding-bottom: 18px;
 }
 
@@ -980,7 +978,7 @@ section {
 }
 
 /* line 92, ../sass/pages/_about.scss */
-h4 span {
+h5 span {
   font-weight: 400;
 }
 
@@ -1042,25 +1040,16 @@ h4 span {
 }
 /* line 57, ../sass/pages/_main.scss */
 .content__hero--inner > p {
-  font-weight: 300;
-}
-/* line 60, ../sass/pages/_main.scss */
-.content__hero--inner > p:first-child {
-  font-size: 45px;
-  line-height: 114px;
-  letter-spacing: -1px;
-}
-/* line 66, ../sass/pages/_main.scss */
-.content__hero--inner > p:last-of-type {
-  padding-bottom: 55px;
-  font-size: 40px;
-  line-height: 112px;
-  letter-spacing: -2px;
+  padding-left: 30px;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 35px;
+  letter-spacing: -4px;
 }
 
 /* line 2, ../sass/pages/_pricing.scss */
 .wrapper__pricing {
-  padding-top: 6.5em;
+  padding-top: 5.8em;
   padding-bottom: 100px;
 }
 
@@ -1069,7 +1058,7 @@ h4 span {
   padding-top: 18px;
 }
 /* line 11, ../sass/pages/_pricing.scss */
-.pricing__description > h3 {
+.pricing__description > h4 {
   padding: 30px 0 20px 0;
 }
 
@@ -1214,7 +1203,7 @@ h4 span {
 /* line 2, ../sass/pages/_service.scss */
 .wrapper__service {
   padding-top: 6.1em;
-  padding-bottom: 6.8em;
+  padding-bottom: 6.7em;
 }
 
 /* line 8, ../sass/helpers/_mixins.scss */
@@ -1257,7 +1246,7 @@ h4 span {
   padding: 0 15px;
 }
 /* line 13, ../sass/pages/_service.scss */
-.service__column > h3 {
+.service__column > h4 {
   padding: 30px 0 18px 0;
 }
 /* line 16, ../sass/pages/_service.scss */
@@ -1356,7 +1345,7 @@ h4 span {
 /* line 2, ../sass/pages/_team.scss */
 .wrapper__team {
   padding-top: 6.3em;
-  padding-bottom: 5.4em;
+  padding-bottom: 6.75em;
 }
 
 /* line 8, ../sass/helpers/_mixins.scss */

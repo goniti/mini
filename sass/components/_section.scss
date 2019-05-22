@@ -35,11 +35,12 @@ section {
 }
 /*---Divider---*/
 .divider {
+  margin-left: 70px;
   &--grey {
     background-color: $grey-divider;
     height: 2px;
     width: 1170px;
-    margin: 7px 0 0 70px;
+    border: none;
   }
 }
 .cb {

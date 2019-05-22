@@ -44,7 +44,7 @@
 // Title
 .title {
   @extend %centerer;
-  & > h2 {
+  & > h3 {
     @extend %centerer-right;
   }
 }

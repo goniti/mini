@@ -20,42 +20,42 @@ li {
   }
 }
 
-@for $index from 1 through 3 {
+@for $index from 1 through 2 {
   h#{$index} {
-    font-weight: 700;
-  }
-}
-
-@for $index from 5 through 6 {
-  h#{$index} {
-    font-weight: 700;
-  }
-}
-
-@for $index from 2 through 6 {
-  h#{$index} {
-    color: $black;
+    font-weight: 300;
+    color: #fff;
+    line-height: 110px;
   }
 }
 
 h1 {
-  font-size: 70px;
-  line-height: 29px;
-  letter-spacing: -4px;
+  font-size: 45px;
+  letter-spacing: -1px;
 }
 
 h2 {
+  padding-bottom: 55px;
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+
+@for $index from 3 through 6 {
+  h#{$index} {
+    color: $black;
+    font-weight: 700;
+  }
+}
+h3 {
   font-size: 30px;
   line-height: 1.5em;
   border-right: 4px solid $orange;
 }
 
-h3 {
+h4 {
   font-size: 20px;
   line-height: 16px;
 }
-
-h4 {
+h5 {
   font-weight: 600;
   font-size: 16px;
   line-height: 1em;

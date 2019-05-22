@@ -1,6 +1,6 @@
 // Wrapper Team
 .wrapper__team {
-  @include wrapper(6.3em, 5.4em);
+  @include wrapper(6.3em, 6.75em);
 }
 .team {
   @include n-columns(75em, -4.25em, false, 4);
