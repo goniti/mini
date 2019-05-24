@@ -2,6 +2,10 @@
 .navbar {
   @extend %centerer;
 }
+// Carousel
+.swiper-slide {
+  @extend %column;
+}
 // Wrapper
 .wrapper {
   @extend %centerer;
@@ -12,6 +16,9 @@
   &__pricing {
     @extend %center;
     @extend %wrap;
+  }
+  &__references {
+    @extend %column;
   }
 }
 // Content

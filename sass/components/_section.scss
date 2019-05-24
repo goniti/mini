@@ -32,6 +32,12 @@ section {
     background: url(../img/bg__section-02.jpg) center top fixed;
     @include background-size(cover);
   }
+  &__references {
+    padding-left: 65px;
+    margin-bottom: 1px;
+    background: url(../img/bg__section-03.jpg) center top fixed;
+    @include background-size(cover);
+  }
 }
 /*---Divider---*/
 .divider {

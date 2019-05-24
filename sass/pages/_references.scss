@@ -1,0 +1,33 @@
+/*---Wrapper references ---*/
+.wrapper__references {
+  @include wrapper(11.35em, 6.75em);
+  color: #ffffff;
+}
+
+.references {
+  &__text {
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    font-style: italic;
+    max-width: 770px;
+    line-height: 1.8rem;
+    letter-spacing: -0.2px;
+  }
+
+  &__author {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.2px;
+  }
+  &__divider {
+    @include divider(2px, 49px, $orange);
+    margin: 11px 0 32px 0;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+  &__picture {
+    @include circle(100px, $white 2px, $white);
+    margin-top: 28px;
+  }
+}

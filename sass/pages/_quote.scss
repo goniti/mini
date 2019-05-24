@@ -1,11 +1,9 @@
 // /*---Wrapper---*/
-.wrapper {
-  &__quote {
-    color: #ffffff;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    @include wrapper(15.15em, 15.15em);
-  }
+.wrapper__quote {
+  @include wrapper(15.15em, 15.15em);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .quote {
