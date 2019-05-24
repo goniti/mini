@@ -1,7 +1,7 @@
-const nav = $('.Navbar__Link');
+const nav = $('.navbar__link');
 
 nav.click(function() {
 
-    $(this).addClass('Navbar__Link--is-active').siblings().removeClass('Navbar__Link--is-active');
+    $(this).addClass('navbar__link--is-active').siblings().removeClass('navbar__link--is-active');
 
 });
