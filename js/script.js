@@ -6,13 +6,26 @@ $(document).ready(function () {
         $(this).addClass('navbar__link--is-active').siblings().removeClass('navbar__link--is-active');
     });
 
-    //Carousel
-    let mySwiper = new Swiper('.references__swiper-container', {
+    //Header Carousel
+    let mainSwiper = new Swiper('.main__swiper-container', {
         // Optional parameters
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        },
+        loop: true,
+        spaceBetween: 30,
+        effect: 'fade',
+    })
+
+
+    //references Carousel
+    let referencesSwiper = new Swiper('.references__swiper-container', {
+        // Optional parameters
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -21,10 +34,8 @@ $(document).ready(function () {
             delay: 2500,
             disableOnInteraction: false,
         },
-        centeredSlides: true,
         mousewheel: true,
         loop: true,
     })
-
 });
 

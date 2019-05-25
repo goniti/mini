@@ -27,13 +27,13 @@ section {
     @include background-size(cover);
   }
   &__stats {
-    padding-left: 65px;
+    padding-left: 4.0625rem;
     margin-bottom: 1px;
     background: url(../img/bg__section-02.jpg) center top fixed;
     @include background-size(cover);
   }
   &__references {
-    padding-left: 65px;
+    padding-left: 4.0625rem;
     margin-bottom: 1px;
     background: url(../img/bg__section-03.jpg) center top fixed;
     @include background-size(cover);
@@ -41,11 +41,11 @@ section {
 }
 /*---Divider---*/
 .divider {
-  margin-left: 70px;
+  margin-left: 4.375rem;
   &--grey {
     background-color: $grey-divider;
     height: 2px;
-    width: 1170px;
+    width: 73.125rem;
     border: none;
   }
 }

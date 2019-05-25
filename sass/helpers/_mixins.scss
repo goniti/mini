@@ -181,8 +181,8 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   content: "";
-  height: 95px;
-  top: -95px;
+  height: 5.9375rem;
+  top: -5.9375rem;
   right: 0;
   left: 0;
   width: 100%;
@@ -197,7 +197,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   content: "";
-  height: 95px;
+  height: 5.9375rem;
   top: 0px;
   right: 0;
   left: 0;
@@ -219,7 +219,7 @@
 
 //--- marks RIGHT
 @mixin quotationRight {
-  font-size: 110px;
+  font-size: 6.875rem;
   content: "\00201D";
   position: absolute;
   top: 16px;
@@ -228,9 +228,9 @@
 
 //--- marks LEFT
 @mixin quotationLeft {
-  font-size: 110px;
+  font-size: 6.875rem;
   content: "\00201C";
   position: absolute;
-  top: 16px;
-  left: -55px;
+  top: 1rem;
+  left: -3.4375rem;
 }

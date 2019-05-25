@@ -8,9 +8,9 @@
   &__text {
     position: relative;
     text-align: center;
-    font-size: 22px;
+    font-size: 1.375rem;
     font-style: italic;
-    max-width: 770px;
+    max-width: 48.125rem;
     line-height: 1.8rem;
     letter-spacing: -0.2px;
   }
@@ -18,16 +18,16 @@
   &__author {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.5rem;
     letter-spacing: 0.2px;
   }
   &__divider {
-    @include divider(2px, 49px, $orange);
-    margin: 11px 0 32px 0;
+    @include divider(2px, 3.0625rem, $orange);
+    margin: 0.6875rem 0 2rem 0;
     border: 1px solid rgba(0, 0, 0, 0);
   }
   &__picture {
-    @include circle(100px, $white 2px, $white);
-    margin-top: 28px;
+    @include circle(6.25rem, $white 2px, $white);
+    margin-top: 1.75rem;
   }
 }

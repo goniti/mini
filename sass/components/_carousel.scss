@@ -1,21 +1,29 @@
+.swiper-pagination-white > .swiper-pagination-bullet {
+  background-color: #fff;
+}
+
+.main__swiper-container {
+  @extend %fullsize;
+  & > .swiper-pagination-bullets {
+    bottom: 1rem;
+    left: 2.1rem;
+    & .swiper-pagination-bullet {
+      margin: 0 2px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
 .references__swiper-container {
-    width: 100%;
-    height: 100%;
+  @extend %fullsize; 
+  & > .swiper-pagination-bullets {
+    bottom: 3.875rem;
+    left: 2rem;
+    & .swiper-pagination-bullet {
+      margin: 0 2px;
+      width: 11px;
+      height: 11px;
+    }
   }
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
+}

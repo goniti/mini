@@ -10,63 +10,63 @@
 
 /*---Content About---*/
 .content__about--inner {
-  margin-left: 67px;
+  margin-left: 4.1875rem;
 
   &-right {
     width: 45%;
-    margin-left: 65px;
+    margin-left: 4.0625rem;
   }
 
   &-left {
     width: 44.5%;
   }
   & h4 {
-    padding-bottom: 18px;
+    padding-bottom: 1.125rem;
   }
 }
 
 .about {
   &__text {
-    max-width: 505px;
-    padding-right: 60px;
+    max-width: 31.5625rem;
+    padding-right: 3.75rem;
 
     &--skills {
-      max-width: 390px;
+      max-width: 24.375rem;
     }
 
     & > p {
       &:nth-child(2) {
-        line-height: 29px;
+        line-height: 1.8125rem;
         font-weight: 300;
-        font-size: 20px;
+        font-size: 1.25rem;
         color: $red;
       }
 
       &:nth-last-child(1) {
-        padding-top: 29px;
+        padding-top: 1.8125rem;
 
         & > span {
-          font-size: 15px;
+          font-size: 0.9375rem;
         }
       }
     }
   }
 
   &__picture {
-    width: 450px;
-    height: 255px;
+    width: 28.125rem;
+    height: 15.9375rem;
 
     &--devices {
-      width: 497px;
-      height: 484px;
-      padding-right: 95px;
+      width: 31.0625rem;
+      height: 30.25rem;
+      padding-right: 5.9375rem;
     }
   }
 
   //Progress Bar width
   &__progressbar {
     margin-top: 4em;
-    width: 555px;
+    width: 34.6875rem;
   }
 }
 

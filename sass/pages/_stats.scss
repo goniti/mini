@@ -10,11 +10,11 @@
     font-weight: bold;
   }
   &__column {
-    padding: 0 82px;
+    padding: 0 5.125rem;
 
     &:hover {
       .icons__circle--large {
-        @include circle(165px, 2px #fff, $transparent);
+        @include circle(10.3125rem, 2px #fff, $transparent);
         & i {
           @include filter(68%, 24%, 2634%, 353deg, 98%, 94%);
         }
@@ -25,11 +25,11 @@
     }
   }
   &__count {
-    font-size: 45px;
+    font-size: 2.8125rem;
     line-height: 0.7;
-    padding-top: 30px;
+    padding-top: 1.875rem;
   }
   &__name {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 }
