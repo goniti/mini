@@ -17,6 +17,9 @@ $(document).ready(function () {
             delay: 3500,
             disableOnInteraction: false,
         },
+        keyboard: {
+            enabled: true,
+          },
         loop: true,
         spaceBetween: 30,
         effect: 'fade',
