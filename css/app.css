@@ -706,14 +706,15 @@ section {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-size: cover;
+  overflow: hidden;
 }
 
 /*---Divider---*/
-/* line 43, ../sass/components/_section.scss */
+/* line 44, ../sass/components/_section.scss */
 .divider {
   margin-left: 4.375rem;
 }
-/* line 45, ../sass/components/_section.scss */
+/* line 46, ../sass/components/_section.scss */
 .divider--grey {
   background-color: #e6e6e6;
   height: 2px;
@@ -721,7 +722,7 @@ section {
   border: none;
 }
 
-/* line 52, ../sass/components/_section.scss */
+/* line 53, ../sass/components/_section.scss */
 .cb {
   -moz-page-break-after: column;
   -webkit-column-break-after: column;
@@ -1065,7 +1066,7 @@ h5 span {
 
 /* line 1, ../sass/pages/_main.scss */
 .main {
-  padding: 5.3125rem 0 15rem 0;
+  padding: 5.3125rem 0 17rem 0;
   margin-bottom: 1px;
   color: #ffffff;
   text-transform: uppercase;
