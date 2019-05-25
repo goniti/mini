@@ -10,16 +10,25 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <!-- Local -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./css/app.css" id="main-styles-link" type="text/css">
   <!--Plugins-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <!-- Local -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/app.css" id="main-styles-link" type="text/css">
 </head>
 
 <body>
   <header class="main">
+    <div class="main__swiper-container swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(../img/header01.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(../img/header02.jpg)"></div>
+        <div class="swiper-slide" style="background-image:url(../img/header03.jpg)"></div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="main__swiper-pagination swiper-pagination swiper-pagination-white"></div>
+    </div>
     <!---------------------------------MENU Navbar-------------------------------->
     <div class="navbar">
       <a class="navbar__link-logo" href="#">
@@ -502,7 +511,7 @@
           </div>
         </div>
         <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination swiper-pagination-white"></div>
       </div>
   </section>
   <!--Jquery-->
