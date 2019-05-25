@@ -25,7 +25,6 @@ $(document).ready(function () {
         effect: 'fade',
     })
 
-
     //references Carousel
     let referencesSwiper = new Swiper('.references__swiper-container', {
         // Optional parameters
@@ -37,8 +36,19 @@ $(document).ready(function () {
             delay: 2500,
             disableOnInteraction: false,
         },
-        mousewheel: true,
         loop: true,
     })
+
+    //portfolio Carousel
+    let portfolioSwiper = new Swiper('.portfolio__swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        mousewheel: true,
+    });
 });
 

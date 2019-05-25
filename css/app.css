@@ -383,32 +383,76 @@ h5 {
 }
 
 /* line 1, ../sass/components/_carousel.scss */
+.swiper-wrapper {
+  z-index: 0;
+}
+
+/* line 4, ../sass/components/_carousel.scss */
 .swiper-pagination-white > .swiper-pagination-bullet {
   background-color: #fff;
 }
 
-/* line 7, ../sass/components/_carousel.scss */
+/* line 11, ../sass/components/_carousel.scss */
 .main__swiper-container > .swiper-pagination-bullets {
   bottom: 1rem;
   left: 2.1rem;
 }
-/* line 10, ../sass/components/_carousel.scss */
+/* line 14, ../sass/components/_carousel.scss */
 .main__swiper-container > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 2px;
   width: 12px;
   height: 12px;
 }
 
-/* line 20, ../sass/components/_carousel.scss */
+/* line 24, ../sass/components/_carousel.scss */
 .references__swiper-container > .swiper-pagination-bullets {
-  bottom: 3.875rem;
+  bottom: 11.875rem;
   left: 2rem;
 }
-/* line 23, ../sass/components/_carousel.scss */
+/* line 27, ../sass/components/_carousel.scss */
 .references__swiper-container > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 2px;
   width: 11px;
   height: 11px;
+}
+
+/* line 36, ../sass/components/_carousel.scss */
+.portfolio__swiper-container {
+  overflow: hidden;
+  height: 36.25rem;
+  width: 73rem;
+  margin-left: 4.0625rem;
+}
+/* line 41, ../sass/components/_carousel.scss */
+.portfolio__swiper-container > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 3px 0;
+  width: 15px;
+  height: 15px;
+}
+/* line 47, ../sass/components/_carousel.scss */
+.portfolio__swiper-pagination {
+  position: static;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 68.5vh;
+  margin-right: 1.1rem;
+}
+/* line 57, ../sass/components/_carousel.scss */
+.portfolio__swiper-slide.swiper-slide.swiper-slide > img {
+  height: 36.25rem;
+  width: 73.125rem;
+}
+/* line 61, ../sass/components/_carousel.scss */
+.portfolio__swiper-slide.swiper-slide.swiper-slide-active {
+  margin-bottom: 30px;
+  z-index: 1;
+}
+/* line 64, ../sass/components/_carousel.scss */
+.portfolio__swiper-slide.swiper-slide.swiper-slide-active > img {
+  height: 36.25rem;
+  width: 73.125rem;
 }
 
 /* line 7, ../sass/components/_icons.scss */
@@ -619,6 +663,21 @@ section {
 }
 /* line 9, ../sass/components/_section.scss */
 .section__service:before {
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 100 95' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,95 100,95 100,0'%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  height: 5.9375rem;
+  top: -5.9375rem;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+/* line 9, ../sass/components/_section.scss */
+.section__portfolio:before {
   position: absolute;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 100 95' fill='rgb(255,255,255)' fill-opacity='1'%3E%3Cpolygon points='0,95 100,95 100,0'%3E%3C/polygon%3E%3C/svg%3E");
   background-position: center center;
@@ -1560,7 +1619,7 @@ h5 span {
 /* line 2, ../sass/pages/_references.scss */
 .wrapper__references {
   padding-top: 11.35em;
-  padding-bottom: 6.75em;
+  padding-bottom: 14.75em;
   color: #ffffff;
 }
 
@@ -1601,6 +1660,13 @@ h5 span {
   border-style: solid;
   background-color: #ffffff;
   margin-top: 1.75rem;
+}
+
+/*---Wrapper portfolio  ---*/
+/* line 2, ../sass/pages/_portfolio.scss */
+.wrapper__portfolio {
+  padding-top: 6.1em;
+  padding-bottom: 6.75em;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,0 +1,4 @@
+/*---Wrapper portfolio  ---*/
+.wrapper__portfolio {
+  @include wrapper(6.1em, 6.75em);
+}
