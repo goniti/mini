@@ -1846,4 +1846,50 @@ h5 span {
   color: #f39c12;
 }
 
+/* line 86, ../sass/pages/_portfolio.scss */
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+/* line 94, ../sass/pages/_portfolio.scss */
+.overlay.open {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 100, ../sass/pages/_portfolio.scss */
+.overlay__inner {
+  background: white;
+  width: 50em;
+  padding: 20px;
+  position: relative;
+  opacity: 1;
+}
+/* line 106, ../sass/pages/_portfolio.scss */
+.overlay__inner > .close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  background: none;
+  outline: 0;
+  color: black;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* line 116, ../sass/pages/_portfolio.scss */
+.overlay__inner > .close:hover {
+  color: #f39c12;
+}
+/* line 120, ../sass/pages/_portfolio.scss */
+.overlay__inner > img {
+  max-width: 50em;
+}
+
 /*# sourceMappingURL=app.css.map */
