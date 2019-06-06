@@ -516,7 +516,6 @@
   </section>
   <!----------------------------------PORTFOLIO-------------------------------->
   <section id="works" class="section__portfolio">
-    <!--Service part1-->
     <div class="wrapper wrapper__portfolio">
       <div class="content__portfolio">
         <!-- Title -->
@@ -527,15 +526,28 @@
           </p>
         </div>
         <!-- Carousel portfolio-->
-
         <div class="portfolio__swiper-container">
           <div class="swiper-wrapper">
-            <div class="portfolio__swiper-slide swiper-slide"><img src="./img/digitalartwork01.jpg" alt=""></div>
-            <div class="portfolio__swiper-slide swiper-slide"><img src="./img/digitalartwork02.jpg" alt=""></div>
-            <div class="portfolio__swiper-slide swiper-slide"><img src="./img/digitalartwork03.jpg" alt=""></div>
+            <div class="portfolio__swiper-slide swiper-slide"><img src="https://picsum.photos/1170/580?random=1"
+                alt="art work"></div>
+            <div class="portfolio__swiper-slide swiper-slide"><img src="https://picsum.photos/1170/580?random=2"
+                alt="art work"></div>
+            <div class="portfolio__swiper-slide swiper-slide"><img src="https://picsum.photos/1170/580?random=3"
+                alt="art work"></div>
           </div>
           <!-- Add Pagination -->
           <div class="portfolio__swiper-pagination swiper-pagination swiper-pagination-white"></div>
+        </div>
+        <div class="portfolio__swiper-navigation">
+          <div>
+            <button class="portfolio__btn-previous" aria-label="previous"><i class="fas fa-chevron-left"></i></button>
+            <button class="portfolio__btn-next" aria-label="next"><i class="fas fa-chevron-right"></i></button>
+            <button class="portfolio__btn-close" aria-label="close"><i class="fas fa-times"></i></button>
+          </div>
+          <div class="portfolio__information">
+            <h4>Digital Artwork</h4>
+            <span>Graphic Design</span>
+          </div>
         </div>
       </div>
     </div>
@@ -544,9 +556,77 @@
       <hr class="divider--grey">
     </div>
     <!---------------------------------PROJECT--------------------------------->
-    <div class="wrapper__project">
-
-
+    <div class="wrapper wrapper__project">
+      <div class="content__project">
+        <nav class="project__toolbar">
+          <a role="button" class="project__item" id="project__column">All Work</a>
+          <span>\\</span>
+          <a role="button" class="project__item" id="project__column--graphics">Graphics</a>
+          <span>\\</span>
+          <a role="button" class="project__item" id="project__column--webdesign">Webdesign</a>
+          <span>\\</span>
+          <a role="button" class="project__item" id="project__column--branding">Branding</a>
+          <span>\\</span>
+          <a role="button" class="project__item" id="project__column--video">Video</a>
+          <span>\\</span>
+          <a role="button" class="project__item" id="project__column--photography">Photography</a>
+        </nav>
+        <div class="project__columns">
+          <div class="project__column project__column--graphics">
+            <img class="project__image" src="https://picsum.photos/1024/720?random=1" alt="portfolio graphics">
+            <h6>Project title here</h6>
+            <p>Graphics</p>
+            <div class="project__overlay">
+              <div class="overlay__background">
+                <span class="overlay__circle"></span>
+                <span class="overlay__line-horizontal"></span>
+                <span class="overlay__line-vertical"></span>
+              </div>
+            </div>
+          </div>
+          <div class="project__column project__column--photography">
+            <img class="project__image" src="https://picsum.photos/295/220?random=2" alt="portfolio photography">
+            <h6>Project title here</h6>
+            <p>Photography</p>
+          </div>
+          <div class="project__column project__column--branding">
+            <img class="project__image" src="https://picsum.photos/295/220?random=3" alt="portfolio branding">
+            <h6>Project title here</h6>
+            <p>Branding</p>
+          </div>
+          <div class="project__column project__column--graphics">
+            <img class="project__image" src="https://picsum.photos/295/220?random=4" alt="portfolio graphics">
+            <h6>Project title here</h6>
+            <p>Graphics</p>
+          </div>
+          <div class="project__column project__column--webdesign">
+            <img class="project__image" src="https://picsum.photos/295/220?random=5" alt="portfolio webdesign">
+            <h6>Project title here</h6>
+            <p>Web Design</p>
+          </div>
+          <div class="project__column project__column--video">
+            <img class="project__image" src="https://picsum.photos/1024/720?random=6" alt="portfolio video">
+            <h6>Project title here</h6>
+            <p>Video</p>
+          </div>
+          <div class="project__column project__column--photography">
+            <img class="project__image" src="https://picsum.photos/295/220?random=7" alt="portfolio photography">
+            <h6>Project title here</h6>
+            <p>Photography</p>
+          </div>
+          <div class="project__column project__column--branding">
+            <img class="project__image" src="https://picsum.photos/1024/720?random=8" alt="portfolio branding">
+            <h6>Project title here</h6>
+            <p>Branding</p>
+          </div>
+          <!-- <div class="overlay">
+              <div class="overlay__inner">
+              <button class="close">close X</button>
+              <img>
+              </div>
+              </div> -->
+        </div>
+      </div>
     </div>
 
     </div>

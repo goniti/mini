@@ -50,7 +50,3 @@ section {
     border: none;
   }
 }
-.cb {
-  @include column-break(after, column);
-  opacity: 0;
-}

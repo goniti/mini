@@ -42,6 +42,10 @@ h2 {
 @for $index from 3 through 6 {
   h#{$index} {
     color: $black;
+  }
+}
+@for $index from 3 through 4 {
+  h#{$index} {
     font-weight: 700;
   }
 }
@@ -60,4 +64,8 @@ h5 {
   font-size: 1rem;
   line-height: 1em;
   padding-bottom: 0.6875rem;
+}
+h6 {
+  font-size: 0.9375rem;
+  font-weight: 700;
 }

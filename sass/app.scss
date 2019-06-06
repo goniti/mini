@@ -11,6 +11,7 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/placeholders";
+@import "helpers/animate";
 
 /* Layouts*/
 @import "layouts/grid";
@@ -31,12 +32,11 @@
 @import "components/ipad-pro";
 
 // Pages
-@import "pages/about";
 @import "pages/main";
-@import "pages/pricing";
+@import "pages/about";
 @import "pages/quote";
-@import "pages/service";
-@import "pages/stats";
 @import "pages/team";
+@import "pages/stats";
+@import "pages/service";
 @import "pages/references";
 @import "pages/portfolio";

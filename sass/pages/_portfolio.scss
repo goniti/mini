@@ -1,4 +1,84 @@
-/*---Wrapper portfolio  ---*/
+// Portfolio
+//--Wrapper portfolio
 .wrapper__portfolio {
-  @include wrapper(6.1em, 6.75em);
+  @include wrapper(6.1em, 6.1rem);
+}
+.portfolio {
+  &__btn {
+    padding: 0.4375rem 0.7188rem;
+    color: #000;
+    background-color: #fff;
+    border: $grey-divider 2px solid;
+    text-decoration: none;
+    outline: none;
+    &:hover {
+      background-color: $grey-divider;
+      color: $orange;
+    }
+    &-previous {
+      @extend .portfolio__btn;
+    }
+    &-next {
+      @extend .portfolio__btn;
+    }
+    &-close {
+      @extend .portfolio__btn;
+    }
+  }
+  &__information {
+    margin-top: 1.6rem;
+    line-height: 2.5rem;
+    text-align: center;
+    & > :nth-child(2) {
+      color: #999;
+      font-size: 14px;
+    }
+  }
+  &__swiper-navigation {
+    margin-left: 4.375rem;
+  }
+}
+// Project
+//--Wrapper portfolio
+.wrapper__project {
+  @include wrapper(6.6em, 6.6875rem);
+}
+.project {
+  @include n-columns(65em, 0.05em, false, 4);
+  &__columns {
+    margin-top: 4.6875rem;
+    max-width: 65.5%;
+    text-align: center;
+  }
+  &__column {
+    margin-bottom: 1.1rem;
+    & img {
+      margin-bottom: 6px;
+      height: 13.75rem;
+      width: 18.4375rem;
+    }
+    & h6 {
+      line-height: 1.5rem;
+    }
+    & p {
+      color: $silver;
+      font-size: 14px;
+    }
+  }
+  &__toolbar {
+    margin-left: 70px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875rem;
+    & > span {
+      padding: 0 1.15rem;
+      color: $darkgrey;
+    }
+  }
+  &__item {
+    color: $black;
+    &:hover {
+      color: $orange;
+    }
+  }
 }

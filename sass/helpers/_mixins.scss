@@ -3,6 +3,36 @@
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
 }
+// Flexbox
+//--flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+//--flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+//--row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+//--nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
+}
 // Columns
 @mixin n-columns($min-width, $gutter, $last-equal: false, $max-cols: 5) {
   &__columns {
@@ -10,12 +40,10 @@
     flex-wrap: wrap;
     margin-left: -$gutter;
     margin-top: -$gutter;
-
     &__column {
       flex: 1 0 $min-width;
       margin-left: $gutter;
       margin-top: $gutter;
-
       @if $last-equal {
         @for $i from 2 through $max-cols {
           $screen-width: ($min-width * $i)+ ($gutter * $i);
@@ -24,7 +52,6 @@
             max-width: calc(#{$column-width} - #{$gutter});
           }
         }
-
         $column-width: (100% / $max-cols);
         @media (min-width: $min-width*$max-cols) {
           min-width: calc(#{$column-width} - #{$gutter});
@@ -100,7 +127,6 @@
   font-weight: 400;
 }
 // Animation Button
-
 //--- Drawing effect
 @mixin btn-border-drawing(
   $color: #ccc,

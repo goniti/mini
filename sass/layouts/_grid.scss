@@ -33,12 +33,12 @@
     @extend %wrap;
     //---About--inner-right
     &-right {
-      display: flex;
+      @extend %flex;
       @extend %wrap;
     }
     &-left {
       @extend %center;
-      align-items: flex-end;
+      @extend %align-items-end;
     }
   }
 }
@@ -72,12 +72,33 @@
 // Pricing
 .pricing {
   &__tables {
-    //@extend %centerer-right;
     @extend %centerer;
-
     @extend %wrap;
   }
   &__item > ul > :last-child {
     @extend %centerer;
   }
+}
+// Portfolio
+.portfolio__swiper {
+  &-pagination {
+    @extend %flex;
+    @extend %justify-content-start;
+    @extend %align-items-end;
+    @extend %column;
+  }
+  &-navigation {
+    @extend %centerer;
+    @extend %column;
+  }
+}
+
+// Project
+.project__columns {
+  //for mobil : @extend %center;
+  @extend %justify-content-end;
+}
+.content__project {
+  @extend %centerer;
+  @extend %column;
 }
