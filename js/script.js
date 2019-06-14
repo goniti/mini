@@ -1,14 +1,68 @@
 //initialize
 $(document).ready(function () {
+    // GALLERY Overlay 
+
+    const buttons = document.querySelectorAll('.gallery__column');
+    const overlay = document.querySelectorAll('.overlay');
+    const overlayImage = document.querySelector('.overlay__inner img');
+
+    function open(e) {
+        overlay.classList.add('open');
+        const src = e.currentTarget.querySelector('img').src;
+        overlayImage.src = src;
+    }
+
+    function close() {
+        overlay.classList.remove('open');
+    }
+
+    buttons.forEach(button => button.addEventListener('click', open));
+    overlay.addEventListener('click', close);
+
+
+
+
     //Navbar
     const nav = $('.navbar__link');
     nav.click(function () {
         $(this).addClass('navbar__link--is-active').siblings().removeClass('navbar__link--is-active');
     });
 
-    //Header Carousel
+    //GALLERY toolbar
+    let galleryCategory = "gallery__column--graphics";
+    $(".gallery__item").click(function () {
+        galleryCategory = this.id;
+        $(".gallery__columns").fadeTo(150, 0.15);
+        $(".gallery__column").not("." + galleryCategory).fadeOut().removeClass('gallery__column-show');
+
+        setTimeout(function () {
+            $("." + galleryCategory).fadeIn().addClass('gallery__column-show');
+            $(".gallery__columns").fadeTo(300, 1);
+        }, 300);
+    });
+
+
+
+    // GALLERY Overlay With Jquery
+    
+            // const buttons = $('.gallery__column');
+            // const overlay = $('.overlay');
+            // let overlayImage = $('.overlay__inner img');
+            // buttons.click(function(e) {
+            //     overlay.addClass('open');
+            //     let src = e.$('img', this).attr('src');
+            //     overlayImage.src = src;
+            //   });
+            // overlay.click(function() {
+            //     overlay.removeClass('open');
+            //   });
+    
+
+
+    //Parameter Carousel
+    //--- Carousel Header
     let mainSwiper = new Swiper('.main__swiper-container', {
-        // Optional parameters
+        // Optional Parameters
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -25,7 +79,7 @@ $(document).ready(function () {
         effect: 'fade',
     })
 
-    //references Carousel
+    //--- Carousel References
     let referencesSwiper = new Swiper('.references__swiper-container', {
         // Optional parameters
         pagination: {
@@ -39,7 +93,7 @@ $(document).ready(function () {
         loop: true,
     })
 
-    //portfolio Carousel
+    //--- Carousel Portfolio
     let portfolioSwiper = new Swiper('.portfolio__swiper-container', {
         direction: 'vertical',
         slidesPerView: 1,
@@ -55,45 +109,5 @@ $(document).ready(function () {
             prevEl: '.portfolio__btn-previous',
         },
     });
-
-    $(".portfolio__btn-close").click(function () {
-        portfolioSwiper.on('click', function (e, h) {
-            var el = e.target || e.currentTarget;
-            el.remove()
-            this.update()
-        });
-    });
-
-    //project toolbar
-    let galleryCategory = "";
-    $(".project__item").click(function () {
-        galleryCategory = this.id;
-        $(".project__columns").fadeTo(150, 0.15);
-        $(".project__columns div").not("." + galleryCategory).fadeOut().removeClass('project__column-show');
-        setTimeout(function () {
-            $("." + galleryCategory).fadeIn().addClass('project__column-show');
-            $(".project__columns").fadeTo(300, 1);
-        }, 300);
-
-    });
-// GALLERY ON CLICK 
-
-const buttons = document.querySelectorAll('.project__column');
-const overlay = document.querySelector('.overlay');
-const overlayImage = document.querySelector('.overlay__inner img');
-
-function open(e) {
-  overlay.classList.add('open');
-  const src= e.currentTarget.querySelector('img').src;
-  overlayImage.src = src;
-}
-
-function close() {
-  overlay.classList.remove('open');
-}
-
-buttons.forEach(button => button.addEventListener('click', open));
-overlay.addEventListener('click', close);
-
 });
 

@@ -93,12 +93,23 @@
   }
 }
 
-// Project
-.project__columns {
+// Gallery
+.gallery__columns {
   //for mobil : @extend %center;
   @extend %justify-content-end;
 }
-.content__project {
+.content__gallery {
   @extend %centerer;
   @extend %column;
+}
+// Gallery Image
+.gallery__image {
+  display: flex;
+}
+// Gallery Overlay
+.overlay {
+  display: none;
+  &.open {
+    @extend %centerer;
+  }
 }
