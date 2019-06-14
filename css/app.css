@@ -68,7 +68,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 2, ../sass/helpers/_placeholders.scss */
-.navbar, .swiper-slide, .wrapper, .content, .content__hero--inner, .divider, .title, .icon, .social__team--icons, .pricing__tables, .pricing__item > ul > :last-child, .pricing__item--basic > ul > :last-child, .pricing__item--gold > ul > :last-child, .pricing__item--gold-recommended > ul > :last-child, .pricing__item--silver > ul > :last-child, .portfolio__swiper-navigation, .content__gallery, .overlay.open, .btn, .btn__inverted, .icons__circle--base, .icons__circle--small, .icons__circle--large, .logo-mini, .logo-mini:hover, .team__column--picture, .stats__column:hover .icons__circle--large, .service__column:hover .icons__circle--small, .references__picture, .wrapper__pricing, .content__about--inner, .content__about--inner-left, .team__columns, .stats__columns, .title > h3, .content__about--inner-right, .portfolio__swiper-pagination {
+.navbar, .swiper-slide, .wrapper, .content, .content__hero--inner, .divider, .title, .icon, .social__team--icons, .pricing__tables, .pricing__item > ul > :last-child, .pricing__item--basic > ul > :last-child, .pricing__item--gold > ul > :last-child, .pricing__item--gold-recommended > ul > :last-child, .pricing__item--silver > ul > :last-child, .portfolio__swiper-navigation, .content__gallery, .gallery__overlay--image, .gallery__overlay--zoom-circle, .btn, .btn__inverted, .icons__circle--base, .icons__circle--small, .icons__circle--large, .logo-mini, .logo-mini:hover, .team__column--picture, .stats__column:hover .icons__circle--large, .service__column:hover .icons__circle--small, .references__picture, .wrapper__pricing, .content__about--inner, .content__about--inner-left, .team__columns, .stats__columns, .title > h3, .content__about--inner-right, .portfolio__swiper-pagination {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -111,7 +111,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 32, ../sass/helpers/_placeholders.scss */
-.navbar, .swiper-slide, .wrapper, .content, .content__hero--inner, .divider, .title, .icon, .social__team--icons, .pricing__tables, .pricing__item > ul > :last-child, .pricing__item--basic > ul > :last-child, .pricing__item--gold > ul > :last-child, .pricing__item--gold-recommended > ul > :last-child, .pricing__item--silver > ul > :last-child, .portfolio__swiper-navigation, .content__gallery, .overlay.open, .btn, .btn__inverted, .icons__circle--base, .icons__circle--small, .icons__circle--large, .logo-mini, .logo-mini:hover, .team__column--picture, .stats__column:hover .icons__circle--large, .service__column:hover .icons__circle--small, .references__picture, .wrapper__pricing, .content__about--inner, .content__about--inner-left, .team__columns, .stats__columns {
+.navbar, .swiper-slide, .wrapper, .content, .content__hero--inner, .divider, .title, .icon, .social__team--icons, .pricing__tables, .pricing__item > ul > :last-child, .pricing__item--basic > ul > :last-child, .pricing__item--gold > ul > :last-child, .pricing__item--gold-recommended > ul > :last-child, .pricing__item--silver > ul > :last-child, .portfolio__swiper-navigation, .content__gallery, .gallery__overlay--image, .gallery__overlay--zoom-circle, .btn, .btn__inverted, .icons__circle--base, .icons__circle--small, .icons__circle--large, .logo-mini, .logo-mini:hover, .team__column--picture, .stats__column:hover .icons__circle--large, .service__column:hover .icons__circle--small, .references__picture, .wrapper__pricing, .content__about--inner, .content__about--inner-left, .team__columns, .stats__columns {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
@@ -128,7 +128,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 42, ../sass/helpers/_placeholders.scss */
-.navbar, .swiper-slide, .wrapper, .content, .content__hero--inner, .divider, .title, .icon, .social__team--icons, .pricing__tables, .pricing__item > ul > :last-child, .pricing__item--basic > ul > :last-child, .pricing__item--gold > ul > :last-child, .pricing__item--gold-recommended > ul > :last-child, .pricing__item--silver > ul > :last-child, .portfolio__swiper-navigation, .content__gallery, .overlay.open, .btn, .btn__inverted, .icons__circle--base, .icons__circle--small, .icons__circle--large, .logo-mini, .logo-mini:hover, .team__column--picture, .stats__column:hover .icons__circle--large, .service__column:hover .icons__circle--small, .references__picture, .title > h3 {
+.navbar, .swiper-slide, .wrapper, .content, .content__hero--inner, .divider, .title, .icon, .social__team--icons, .pricing__tables, .pricing__item > ul > :last-child, .pricing__item--basic > ul > :last-child, .pricing__item--gold > ul > :last-child, .pricing__item--gold-recommended > ul > :last-child, .pricing__item--silver > ul > :last-child, .portfolio__swiper-navigation, .content__gallery, .gallery__overlay--image, .gallery__overlay--zoom-circle, .btn, .btn__inverted, .icons__circle--base, .icons__circle--small, .icons__circle--large, .logo-mini, .logo-mini:hover, .team__column--picture, .stats__column:hover .icons__circle--large, .service__column:hover .icons__circle--small, .references__picture, .title > h3 {
   -webkit-align-items: center;
   -moz-align-items: center;
   -ms-align-items: center;
@@ -250,16 +250,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   }
 }
 /* Layouts*/
-/* line 106, ../sass/layouts/_grid.scss */
-.gallery__image {
-  display: flex;
-}
-
-/* line 110, ../sass/layouts/_grid.scss */
-.overlay {
-  display: none;
-}
-
 /* line 1, ../sass/base/_base.scss */
 body {
   font-size: 1rem;
@@ -1763,7 +1753,6 @@ h5 span {
 
 /* line 7, ../sass/pages/_portfolio.scss */
 .portfolio__btn, .portfolio__btn-previous, .portfolio__btn-next, .portfolio__btn-close {
-  cursor: pointer;
   padding: 0.4375rem 0.7188rem;
   color: #000;
   background-color: #fff;
@@ -1771,28 +1760,28 @@ h5 span {
   text-decoration: none;
   outline: none;
 }
-/* line 15, ../sass/pages/_portfolio.scss */
+/* line 14, ../sass/pages/_portfolio.scss */
 .portfolio__btn:hover, .portfolio__btn-previous:hover, .portfolio__btn-next:hover, .portfolio__btn-close:hover {
   background-color: #e6e6e6;
   color: #f39c12;
 }
-/* line 29, ../sass/pages/_portfolio.scss */
+/* line 28, ../sass/pages/_portfolio.scss */
 .portfolio__information {
   margin-top: 1.6rem;
   line-height: 2.5rem;
   text-align: center;
 }
-/* line 33, ../sass/pages/_portfolio.scss */
+/* line 32, ../sass/pages/_portfolio.scss */
 .portfolio__information > :nth-child(2) {
   color: #999;
   font-size: 14px;
 }
-/* line 38, ../sass/pages/_portfolio.scss */
+/* line 37, ../sass/pages/_portfolio.scss */
 .portfolio__swiper-navigation {
   margin-left: 4.375rem;
 }
 
-/* line 44, ../sass/pages/_portfolio.scss */
+/* line 43, ../sass/pages/_portfolio.scss */
 .wrapper__gallery {
   padding-top: 6.6em;
   padding-bottom: 6.6875rem;
@@ -1811,15 +1800,16 @@ h5 span {
   margin-left: 0.05em;
   margin-top: 0.05em;
 }
-/* line 49, ../sass/pages/_portfolio.scss */
+/* line 48, ../sass/pages/_portfolio.scss */
 .gallery__columns {
   margin-top: 4.6875rem;
   max-width: 65.5%;
   text-align: center;
 }
-/* line 54, ../sass/pages/_portfolio.scss */
+/* line 53, ../sass/pages/_portfolio.scss */
 .gallery__column {
   margin-bottom: 1.1rem;
+  cursor: pointer;
 }
 /* line 56, ../sass/pages/_portfolio.scss */
 .gallery__column img {
@@ -1841,7 +1831,7 @@ h5 span {
   cursor: pointer;
 }
 /* line 70, ../sass/pages/_portfolio.scss */
-.gallery__column:hover .gallery__image--overlay {
+.gallery__column:hover .gallery__overlay--image {
   opacity: 0.9;
 }
 /* line 75, ../sass/pages/_portfolio.scss */
@@ -1868,68 +1858,62 @@ h5 span {
 .gallery__container {
   position: relative;
 }
-
-/* line 96, ../sass/pages/_portfolio.scss */
-.image--overlay-circle {
-  height: 100px;
+/* line 95, ../sass/pages/_portfolio.scss */
+.gallery__overlay--image {
+  -moz-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  -webkit-transition: all 0.6s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.6s ease 0s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 94%;
+  width: 100%;
+  background-color: #e6e6e6;
+}
+/* line 106, ../sass/pages/_portfolio.scss */
+.gallery__overlay--zoom-circle {
+  opacity: 0.6;
   background-color: orange;
   border-radius: 50%;
+  height: 100px;
   width: 100px;
-  opacity: 0.6;
-  justify-content: center;
-  display: flex;
-  align-items: center;
 }
-
-/* line 106, ../sass/pages/_portfolio.scss */
-.image--overlay-horizontalLine {
-  height: 1px;
+/* line 113, ../sass/pages/_portfolio.scss */
+.gallery__overlay--zoom-horizontalLine {
   background-color: white;
+  height: 1px;
   width: 45px;
   position: absolute;
 }
-
-/* line 112, ../sass/pages/_portfolio.scss */
-.image--overlay-verticalLine {
-  height: 45px;
+/* line 119, ../sass/pages/_portfolio.scss */
+.gallery__overlay--zoom-verticalLine {
   background-color: white;
+  height: 45px;
   width: 1px;
   position: absolute;
 }
 
-/* line 118, ../sass/pages/_portfolio.scss */
-.gallery__image--overlay {
-  transition: 0.5s ease;
-  opacity: 0;
-  position: absolute;
-  padding: 1px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: #e6e6e6;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* line 140, ../sass/pages/_portfolio.scss */
+/* line 129, ../sass/pages/_portfolio.scss */
 .overlay {
   background: rgba(0, 0, 0, 0.7);
+  display: none;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 3;
 }
-/* line 147, ../sass/pages/_portfolio.scss */
+/* line 137, ../sass/pages/_portfolio.scss */
 .overlay.open {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-/* line 150, ../sass/pages/_portfolio.scss */
+/* line 143, ../sass/pages/_portfolio.scss */
 .overlay__inner {
   background: white;
   width: 50em;
@@ -1937,24 +1921,25 @@ h5 span {
   position: relative;
   opacity: 1;
 }
-/* line 156, ../sass/pages/_portfolio.scss */
+/* line 149, ../sass/pages/_portfolio.scss */
 .overlay__inner > .close {
   position: absolute;
   top: 3px;
   right: 10px;
+  cursor: pointer;
   background: none;
   outline: 0;
   color: black;
+  font-weight: bold;
   border: 0;
-  cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-/* line 167, ../sass/pages/_portfolio.scss */
+/* line 161, ../sass/pages/_portfolio.scss */
 .overlay__inner > .close:hover {
   color: #f39c12;
 }
-/* line 171, ../sass/pages/_portfolio.scss */
+/* line 165, ../sass/pages/_portfolio.scss */
 .overlay__inner > img {
   max-width: 50em;
 }

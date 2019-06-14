@@ -102,14 +102,11 @@
   @extend %centerer;
   @extend %column;
 }
-// Gallery Image
-.gallery__image {
-  display: flex;
-}
-// Gallery Overlay
-.overlay {
-  display: none;
-  &.open {
+.gallery__overlay {
+  &--image {
+    @extend %centerer;
+  }
+  &--zoom-circle {
     @extend %centerer;
   }
 }
