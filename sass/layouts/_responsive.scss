@@ -1,13 +1,276 @@
-// on phone
-//.stats__column {
-//     padding: 0 82px;
-//     /* width: 65%; */
-//     /* display: flex; */
-//     /* justify-content: space-between; */
-//     /* align-items: baseline; */
-// }
+// ON PHONE
+h1 {
+  @include media(phone) {
+    font-size: 1.8rem;
+  }
+}
+h2 {
+  @include media(phone) {
+    font-size: 1.5rem;
+  }
+}
+.title {
+  @include media(phone) {
+    flex-direction: column;
+    align-items: flex-start;
+    & > h3 {
+      padding-right: 0;
+      min-width: 0;
+      margin-left: 1rem;
+      border-bottom: 4px solid #f39c12;
+      border-right: none;
+    }
+  }
+}
+.divider {
+  @include media(phone) {
+    margin-left: 0;
+  }
+}
 
+//NAVBAR
+.navbar {
+  @include media(phone) {
+    height: 60px !important;
+    top: 0;
+  }
+  //navbar menu
+  &__menu {
+    @include media(phone) {
+      width: 95%;
+      &--side-right {
+        right: 1rem;
+      }
+    }
 
-// .pricing__item--silver {
-//     width: 100%;
-// }
+    &--items {
+      @include media(phone) {
+        display: none;
+      }
+    }
+    &--title {
+      @include media(phone) {
+        font-size: 16px;
+      }
+    }
+    &-scrolled {
+      @include media(phone) {
+        padding-left: 0;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.logo-mini {
+  @include media(phone) {
+    width: 3.0625rem;
+    height: 3.0625rem;
+    font-size: 1rem;
+
+    &:hover {
+      color: $black;
+      line-height: 0.1rem;
+      width: 3.0625rem;
+      height: 3.0625rem;
+      font-size: 1rem;
+    }
+  }
+}
+// Show button burger menu on phone
+.burgerMenu__btn--open {
+  @include media(phone) {
+    display: flex;
+  }
+}
+
+// MAIN
+.main {
+  @include media(phone) {
+    padding: 12rem 0;
+  }
+}
+.wrapper__main {
+  @include media(phone) {
+    padding-left: 0;
+  }
+}
+.content__hero {
+  @include media(phone) {
+    padding-top: 0;
+    &--inner > p {
+      padding-left: 0;
+      font-weight: 700;
+      font-size: 1.55rem;
+      line-height: 3.1875rem;
+      letter-spacing: -3px;
+    }
+  }
+}
+.main__swiper-container > .swiper-pagination-bullets {
+  @include media(phone) {
+    left: 0;
+  }
+}
+
+// ABOUT
+
+.about__text {
+  @include media(phone) {
+    max-width: 27.5625rem;
+    padding-right: 0;
+  }
+}
+.icons__about {
+  @include media(phone) {
+    margin-right: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
+
+.content__about--inner {
+  @include media(phone) {
+    margin-left: 0;
+  }
+}
+.content__about--inner-left {
+  @include media(phone) {
+    display: none;
+  }
+}
+.content__about--inner-right {
+  @include media(phone) {
+    flex: 1;
+    & > ul {
+      width: 90%;
+    }
+  }
+}
+// TEAM
+.team__columns {
+  @include media(phone) {
+    margin-left: 0;
+  }
+}
+
+// STATS
+.section__stats {
+  @include media(phone) {
+    padding-left: 0;
+  }
+}
+.stats__column {
+  @include media(phone) {
+    padding: 10px 100px;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: baseline;
+  }
+}
+.icons__circle--large {
+  @include media(phone) {
+    margin: 0 30px;
+  }
+}
+
+// PRICING
+.content__pricing {
+  @include media(phone) {
+    margin-left: 0;
+  }
+}
+
+.pricing__item {
+  @include media(phone) {
+    width: 100%;
+  }
+}
+
+.pricing__tables > ul {
+  @include media(phone) {
+    margin: 10px;
+  }
+}
+
+// REFERENCE
+.section__references {
+  @include media(phone) {
+    padding-left: 0;
+  }
+}
+
+.references__swiper-container > .swiper-pagination-bullets {
+  @include media(phone) {
+    left: 0;
+  }
+}
+
+// QUOTE
+.section__quote {
+  @include media(phone) {
+    padding-left: 0;
+  }
+}
+.quote__text {
+  @include media(phone) {
+    font-size: 1.5rem;
+    max-width: 21rem;
+    &:before,
+    &:after {
+      font-size: 3.875rem;
+    }
+  }
+}
+.quote__author {
+  @include media(phone) {
+    font-size: 1rem;
+  }
+}
+
+// PORTFOLIO
+.content__portfolio {
+  @include media(phone) {
+    width: 100vw;
+  }
+}
+
+.portfolio__swiper-navigation {
+  @include media(phone) {
+    margin-left: 0;
+  }
+}
+
+.portfolio__swiper-slide.swiper-slide.swiper-slide-active {
+  @include media(phone) {
+    height: 18rem;
+    width: 30rem;
+  }
+}
+.portfolio__swiper-container {
+  @include media(phone) {
+    margin: 0;
+  }
+}
+
+/* Tablet*/
+.navbar__menu {
+  @include media(tablet-xl) {
+    width: 90%;
+    margin-left: 0;
+    &-scrolled {
+      padding-left: 0;
+    }
+  }
+}
+
+/* Desktop*/
+.navbar__menu {
+  @include media(desktop) {
+    width: 60%;
+    margin-left: 0;
+  }
+}

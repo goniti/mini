@@ -1,0 +1,140 @@
+.burgerMenu {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: $burgermenu-size;
+  padding: $burgermenu-padding;
+  background-color: $burgermenu-background;
+  box-shadow: 4px 0 5px 0 rgba(0, 0, 0, 0.14), 1px 0 10px 0 rgba(0, 0, 0, 0.12), 2px 0 4px -1px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 500;
+
+  // Menu: styles
+  @include transition-mix();
+  //Menu Right
+  right: ($burgermenu-right);
+
+  /* opened styles */
+  &.js-opened {
+    //Menu right
+    @include burgermenu-open-right();
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* list styles */
+  &__list {
+    position: relative;
+    padding: 0;
+    margin: $burgermenu-offset 0 0 0;
+    list-style-type: none;
+    /* item styles */
+    &--item {
+      &:not(:last-child) {
+        margin-bottom: $burgermenu-line-spacing;
+      }
+      /* link styles */
+      &-link {
+        @include transition-mix;
+        display: inline-flex;
+        align-items: center;
+        color: $burgermenu-color;
+        text-decoration: none;
+        .svg-inline--fa.fa-w-14,.svg-inline--fa.fa-w-18 {
+          width: 2.1em;
+      }
+        &:hover {
+          color: $burgermenu-color-hover;
+        }
+      }
+      /* icon styles */
+      &-icon {
+        position: relative;
+        //top: -3px; /* only for material design icons */
+        font-size: 21px; /* only for fontawesome icons */
+        margin-right: $burgermenu-offset-icon;
+        color: currentColor;
+      }
+    }
+  }
+
+  &__btn {
+    /* close menu styles */
+    &--close {
+      @include position-absolute($top: $burgermenu-padding, $right: $burgermenu-padding);
+      margin: -15px;
+      width: 40px;
+      height: 25px;
+      cursor: pointer;
+
+      /* close icon elements */
+      &:before,
+      &:after {
+        @include transition-mix;
+        display: block;
+        width: 4px;
+        height: 28px;
+        border-radius: 10px;
+
+        content: "";
+
+        transform-origin: center center;
+        background-color: $burgermenu-color;
+      }
+
+      &:before {
+        @include position-absolute($top: 0, $left: 18px);
+        transform: rotate(-45deg);
+      }
+
+      &:after {
+        @include position-absolute($top: 0, $right: 18px);
+        transform: rotate(45deg);
+      }
+
+      /* hover effect */
+      &:hover {
+        &:before,
+        &:after {
+          background-color: $burgermenu-color-hover;
+        }
+      }
+    }
+    &--open {
+      //show only with media Phone
+      display: none;
+      @include transition-mix();
+      width: 35px;
+      height: 25px;
+      overflow: hidden;
+      cursor: pointer;
+
+      //used to hide open btn
+      &.js-hidden {
+        @include transition-mix($duration: 0s);
+        opacity: 0;
+        visibility: hidden;
+      }
+      &-bar {
+        width: 100%;
+        height: 5px;
+        background-color: $burgermenu-background;
+        border-radius: 20px;
+
+        &:nth-child(1) {
+          @include position-absolute($top: 0, $left: 0);
+        }
+
+        &:nth-child(2) {
+          @include position-absolute($top: 10px, $left: 0);
+        }
+
+        &:nth-child(3) {
+          @include position-absolute($top: 20px, $left: 0);
+        }
+      }
+    }
+  }
+}

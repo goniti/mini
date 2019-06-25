@@ -1,3 +1,54 @@
+/* TEST */
+@mixin media($size) {
+  @if $size == phone {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-xl {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == portable {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == desktop {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+//MIXINS
+
+//transitions mixin
+@mixin transition-mix($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
+transition-property: $property;
+transition-duration: $duration;
+transition-timing-function: $timing;
+transition-delay: $delay;
+}
+
+//position absolute mixin
+@mixin position-absolute($top: null, $left: null, $right: null, $bottom: null) {
+position: absolute;
+top: $top;
+left: $left;
+right: $right;
+bottom: $bottom;
+}
+
+// Burger Menu mixin
+@mixin burgermenu-open-right ($side : 0) {
+right: $side;
+@include transition-mix($property: right);
+}
+@mixin burgermenu-open-left ($side : 0) {
+left: $side;
+@include transition-mix($property: left);
+}
+
+
+
+
+
+
+
+
 // Wrapper
 @mixin wrapper($padding-top, $padding-bottom) {
   padding-top: $padding-top;
