@@ -10,447 +10,757 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <!--Plugins-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <!-- Local -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/app.css" id="main-styles-link" type="text/css">
 </head>
 
 <body>
-  <header class="main">
-    <!------------------------------------MENU Navbar------------------------------->
-    <div class="navbar">
-      <a class="navbar__link-logo" href="#">
-        <p><span class="logo-mini">MINI</span></p>
-      </a>
-      <nav class="navbar__items">
-        <a href="#about" class="navbar__link">About</a>
-        <span>\\</span>
-        <a href="#team" class="navbar__link">Team</a>
-        <span>\\</span>
-        <a href="#service" class="navbar__link">Services</a>
-        <span>\\</span>
-        <a href="#" class="navbar__link navbar__link--is-active">Works</a>
-        <span>\\</span>
-        <a href="#" class="navbar__link">Blog</a>
-        <span>\\</span>
-        <a href="#" class="navbar__link">Contact</a>
-      </nav>
-    </div>
-    <!------------------------------------HEADER---------------------------------->
-    <div class="wrapper__main">
-      <div class="content__hero">
-        <div class="content__hero--inner">
-          <p>Best Creative Studio</p>
-          <h1>Design / Branding / WordPress</h1>
-          <p>We Make Great Ideas Happen</p>
-          <button class="btn btn--animated">Learn More</button>
+  <!---------------------------------MENU Navbar-------------------------------->
+  <nav class="navbar">
+    <div class="navbar__menu">
+      <div class="navbar__menu--side-left">
+        <!-- <h1 class="navbar__menu--title">Site Title</h1> -->
+        <a class="navbar__link-logo" href="#">
+          <p><span class="logo-mini">MINI</span></p>
+        </a>
+      </div>
+      <div class="navbar__menu--side-right">
+        <div class="navbar__menu--items">
+
+          <nav class="navbar__items">
+            <a href="#about" class="navbar__link">About</a>
+            <span>\\</span>
+            <a href="#team" class="navbar__link">Team</a>
+            <span>\\</span>
+            <a href="#service" class="navbar__link">Services</a>
+            <span>\\</span>
+            <a href="#works" class="navbar__link">Works</a>
+            <span>\\</span>
+            <a href="#" class="navbar__link">Blog</a>
+            <span>\\</span>
+            <a href="#" class="navbar__link">Contact</a>
+          </nav>
+
+        </div>
+
+        <!--burger menu open button--->
+        <div class="burgerMenu__btn--open">
+          <div class="burgerMenu__btn--open-bar"></div>
+          <div class="burgerMenu__btn--open-bar"></div>
+          <div class="burgerMenu__btn--open-bar"></div>
         </div>
       </div>
     </div>
+  </nav>
+  <!---------------------------------BURGER MENU-------------------------------->
 
-  </header>
-  <!---------------------------------------ABOUT---------------------------------->
-  <section id="about" class="section__about">
-    <!--About part1-->
-    <div class="wrapper wrapper__about--part1">
-      <div class="content__about">
-        <!-- Title -->
-        <div class="title">
-          <h2>About</h2>
-          <p>Proin gravida nibh vel velit auctor aliquet.
-            Aenean sollicitudin, lorem quis bibendum auctor,
-            nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-            Duis sed odio sit amet nibh vulputate cursus a sit amet
-          </p>
+  <nav class="burgerMenu">
+    <!--burger menu close button--->
+    <div class="burgerMenu__btn--close"></div>
+
+    <ul class="burgerMenu__list">
+      <li class="burgerMenu__list--item">
+        <a class="burgerMenu__list--item-link" href="#about" title="About"><i
+            class="burgerMenu__list--item-icon fas fa-info-circle"></i>About</a>
+      </li>
+      <li class="burgerMenu__list--item">
+        <a class="burgerMenu__list--item-link" href="#team" title="Team"><i
+            class="burgerMenu__list--item-icon fas fa-users"></i>Team</a>
+      </li>
+      <li class="burgerMenu__list--item">
+        <a class="burgerMenu__list--item-link" href="#service" title="Services"><i
+            class="burgerMenu__list--item-icon fas fa-tools"></i>Services</a>
+      </li>
+      <li class="burgerMenu__list--item">
+        <a class="burgerMenu__list--item-link" href="#works" title="Work"><i
+            class="burgerMenu__list--item-icon fas fa-briefcase"></i>Work</a>
+      </li>
+      <li class="burgerMenu__list--item">
+        <a class="burgerMenu__list--item-link" href="#" title="Blog"><i
+            class="burgerMenu__list--item-icon fab fa-blogger-b"></i>Blog</a>
+      </li>
+      <li class="burgerMenu__list--item">
+        <a class="burgerMenu__list--item-link" href="#" title="Contact"><i
+            class="burgerMenu__list--item-icon fas fa-mail-bulk"></i>Contact</a>
+      </li>
+    </ul>
+
+  </nav>
+
+  <div class="page__content">
+    <!----------------------------MAIN--------------------------->
+    <header class="main">
+      <div class="main__swiper-container swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image:url(./img/header01.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./img/header02.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./img/header03.jpg)"></div>
         </div>
-        <!--About--inner-->
-        <div class="content__about--inner">
-          <div class="icons__about">
-            <div class="icons__circle--base">
-              <i class="icon icon-bulb"></i>
-            </div>
+        <!-- Add Pagination -->
+        <div class="main__swiper-pagination swiper-pagination swiper-pagination-white"></div>
+      </div>
+
+      <!-----------------------------------HEADER----------------------------------->
+      <div class="wrapper__main">
+        <div class="content__hero">
+          <div class="content__hero--inner">
+            <h1>Best Creative Studio</h1>
+            <p>Design / Branding / WordPress</p>
+            <h2>We Make Great Ideas Happen</h2>
+            <button class="btn btn--animated">Learn More</button>
           </div>
-
-          <div class="about__text">
-            <h3>Our Story</h3>
-            <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
-              elit. </p>
-            <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
-              Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
-              Sed non mauris vitae erat consequat auctor eu in elit.
-              Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-              per <span>inceptos himenaeos.</span></p>
-          </div>
-
-          <img class="about__picture" src="./img/work02.jpg" alt="Our-story">
-
         </div>
       </div>
-    </div>
-    <!--Divider-->
-    <div class="divider">
-      <div class="divider--grey"></div>
-    </div>
-    <!--About part2-->
-    <div class="wrapper wrapper__about--part2">
-      <div class="content__about">
-        <!--About--inner-->
-        <div class="content__about--inner">
-          <div class="content__about--inner-left">
-              <div class="device device-iphone-8 device-spacegray">
-                  <div class="device-frame">
-                    <img class="device-content" src="./img/iphone-inner-01.png">
-                  </div>
-                  <div class="device-stripe"></div>
-                  <div class="device-header"></div>
-                  <div class="device-sensors"></div>
-                  <div class="device-btns"></div>
-                  <div class="device-power"></div>
-                </div>
-                <div class="device device-ipad-pro device-spacegray">
-                    <div class="device-frame">
-                      <img class="device-content" src="./img/ipad-inner-01.png">
-                    </div>
-                    <div class="device-stripe"></div>
-                    <div class="device-header"></div>
-                    <div class="device-sensors"></div>
-                    <div class="device-btns"></div>
-                    <div class="device-power"></div>
-                  </div>
-            <!-- <img class="about__picture--devices" src="./img/devices.png" alt="devices"> -->
+
+    </header>
+    <!-------------------------------------ABOUT------------------------------------>
+    <section id="about" class="section__about">
+      <!--About part1-->
+      <div class="wrapper wrapper__about--part1">
+        <div class="content__about">
+          <!-- Title -->
+          <div class="title">
+            <h3>About</h3>
+            <p>Proin gravida nibh vel velit auctor aliquet.
+              Aenean sollicitudin, lorem quis bibendum auctor,
+              nisi elit consequat ipsum, nec sagittis sem nibh id elit.
+              Duis sed odio sit amet nibh vulputate cursus a sit amet
+            </p>
           </div>
-
-          <div class="content__about--inner-right">
-
+          <!--About--inner-->
+          <div class="content__about--inner">
             <div class="icons__about">
               <div class="icons__circle--base">
-                <i class="icon icon-params"></i>
+                <i class="icon icon-bulb"></i>
               </div>
             </div>
 
-            <div class="about__text--skills">
-              <h3>Our Skills</h3>
+            <div class="about__text">
+              <h4>Our Story</h4>
+              <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id
+                elit. </p>
               <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
                 Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
-                Sed non mauris vitae erat consequat auctor eu in elit.</p>
+                Sed non mauris vitae erat consequat auctor eu in elit.
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                per <span>inceptos himenaeos.</span></p>
             </div>
 
-            <ul class="about__progressbar">
-              <li class="progressbar__design">
-                <h4>Design <span>/ 88%</span></h4>
-                <div class="progressbar">
-                  <div></div>
-                </div>
-              </li>
-              <li class="progressbar__developement">
-                <h4>Development <span>/ 76%</span></h4>
-                <div class="progressbar">
-                  <div></div>
-                </div>
-              </li>
-              <li class="progressbar__wordpress">
-                <h4>Wordpress <span>/ 81%</span></h4>
-                <div class="progressbar">
-                  <div></div>
-                </div>
-              </li>
-              <li class="progressbar__drupal">
-                <h4>Drupal <span>/ 71%</span></h4>
-                <div class="progressbar">
-                  <div></div>
-                </div>
-              </li>
-            </ul>
+            <img class="about__picture" src="./img/work02.jpg" alt="Our-story">
 
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!--------------------------------------QUOTE----------------------------------->
-  <section class="section__quote">
-    <div class="wrapper wrapper__quote">
-      <!--Quote text-->
-      <blockquote class="quote__text">Simplicity is about subtracting the obvious
-        and adding the meaningful
-      </blockquote>
       <!--Divider-->
-      <hr class="quote__divider">
-      <!--Quote author-->
-      <cite class="quote__author">
-        John Maeda
-      </cite>
-    </div>
-  </section>
-  <!--------------------------------------TEAM------------------------------------>
-  <section id="team" class="section__team">
-    <div class="wrapper wrapper__team">
-      <div class="content__team">
-        <!-- Title -->
-        <div class="title">
-          <h2>Team</h2>
+      <div class="divider">
+        <hr class="divider--grey">
+      </div>
+      <!--About part2-->
+      <div class="wrapper wrapper__about--part2">
+        <div class="content__about">
+          <!--About--inner-->
+          <div class="content__about--inner">
+            <div class="content__about--inner-left">
+              <div class="device device-iphone-8 device-spacegray">
+                <div class="device-frame">
+                  <img class="device-content" src="./img/iphone-inner-01.png">
+                </div>
+                <div class="device-stripe"></div>
+                <div class="device-header"></div>
+                <div class="device-sensors"></div>
+                <div class="device-btns"></div>
+                <div class="device-power"></div>
+              </div>
+              <div class="device device-ipad-pro device-spacegray">
+                <div class="device-frame">
+                  <img class="device-content" src="./img/ipad-inner-01.png">
+                </div>
+                <div class="device-stripe"></div>
+                <div class="device-header"></div>
+                <div class="device-sensors"></div>
+                <div class="device-btns"></div>
+                <div class="device-power"></div>
+              </div>
+              <!-- <img class="about__picture--devices" src="./img/devices.png" alt="devices"> -->
+            </div>
+
+            <div class="content__about--inner-right">
+
+              <div class="icons__about">
+                <div class="icons__circle--base">
+                  <i class="icon icon-params"></i>
+                </div>
+              </div>
+
+              <div class="about__text--skills">
+                <h4>Our Skills</h4>
+                <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                  Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+                  Sed non mauris vitae erat consequat auctor eu in elit.</p>
+              </div>
+
+              <ul class="about__progressbar">
+                <li class="progressbar__design">
+                  <h5>Design <span>/ 88%</span></h5>
+                  <div class="progressbar">
+                    <div></div>
+                  </div>
+                </li>
+                <li class="progressbar__developement">
+                  <h5>Development <span>/ 76%</span></h5>
+                  <div class="progressbar">
+                    <div></div>
+                  </div>
+                </li>
+                <li class="progressbar__wordpress">
+                  <h5>Wordpress <span>/ 81%</span></h5>
+                  <div class="progressbar">
+                    <div></div>
+                  </div>
+                </li>
+                <li class="progressbar__drupal">
+                  <h5>Drupal <span>/ 71%</span></h5>
+                  <div class="progressbar">
+                    <div></div>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------------------QUOTE------------------------------------>
+    <section class="section__quote">
+      <div class="wrapper wrapper__quote">
+        <!--Quote text-->
+        <blockquote class="quote__text">Simplicity is about subtracting the obvious
+          and adding the meaningful
+        </blockquote>
+        <!--Divider-->
+        <hr class="quote__divider">
+        <!--Quote author-->
+        <cite class="quote__author">
+          John Maeda
+        </cite>
+      </div>
+    </section>
+    <!-------------------------------------TEAM------------------------------------->
+    <section id="team" class="section__team">
+      <div class="wrapper wrapper__team">
+        <div class="content__team">
+          <!-- Title -->
+          <div class="title">
+            <h3>Team</h3>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+              consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+            </p>
+          </div>
+          <!--Column Team-->
+          <div class="team__columns">
+            <!-- 1st Column-->
+            <div class="team__column">
+              <img class="team__column--picture" src="./img/team01.jpg" alt="Martin Doe">
+              <h4>john Doe</h4>
+              <span>Founder</span>
+              <!--Divider-->
+              <hr class="team__divider">
+              <!--Description-->
+              <p> Morbi accumsan ipsum velit.
+                Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+              <div class="social__team">
+                <div class="social__team--icons">
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-dribbble"></i>
+                  <i class="fab fa-google-plus-g"></i>
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+              </div>
+            </div>
+            <!-- 2nd Column-->
+            <div class="team__column">
+              <img class="team__column--picture" src="./img/team02.jpg" alt="Martin Doe">
+              <h4>Jesmine Doe</h4>
+              <span>Designer</span>
+              <!--Divider-->
+              <hr class="team__divider">
+              <!--Description-->
+              <p> Morbi accumsan ipsum velit.
+                Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+              <div class="social__team">
+                <div class="social__team--icons">
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-dribbble"></i>
+                  <i class="fab fa-google-plus-g"></i>
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+              </div>
+            </div>
+            <!-- 3rd Column-->
+            <div class="team__column">
+              <img class="team__column--picture" src="./img/team03.jpg" alt="Martin Doe">
+              <h4>Martin Doe</h4>
+              <span>Developer</span>
+              <!--Divider-->
+              <hr class="team__divider">
+              <!--Description-->
+              <p> Morbi accumsan ipsum velit.
+                Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+              <div class="social__team">
+                <div class="social__team--icons">
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-dribbble"></i>
+                  <i class="fab fa-google-plus-g"></i>
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+              </div>
+            </div>
+            <!-- 4th Column-->
+            <div class="team__column">
+              <img class="team__column--picture" src="./img/team04.jpg" alt="Martin Doe">
+              <h4>Anthony Doe</h4>
+              <span>Photographer</span>
+              <!--Divider-->
+              <hr class="team__divider">
+              <!--Description-->
+              <p> Morbi accumsan ipsum velit.
+                Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
+              <div class="social__team">
+                <div class="social__team--icons">
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-facebook-f"></i>
+                  <i class="fab fa-dribbble"></i>
+                  <i class="fab fa-google-plus-g"></i>
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-------------------------------------STATS------------------------------------>
+    <section class="section__stats">
+      <div class="wrapper wrapper__stats">
+        <div class="content__stats">
+          <div class="stats__columns">
+            <!-- 1st Column-->
+            <div class="stats__column">
+              <div class="icons__circle--large">
+                <i class="icon icon-cup"></i>
+                <div>
+                </div>
+              </div>
+              <p class="stats__count">6K+</p>
+              <p class="stats__name">Coffees</p>
+            </div>
+            <!-- 2nd Column-->
+            <div class="stats__column">
+              <div class="icons__circle--large">
+                <i class="icon icon-stack"></i>
+              </div>
+              <p class="stats__count">743</p>
+              <p class="stats__name">Projects</p>
+            </div>
+            <!-- 3rd Column-->
+            <div class="stats__column">
+              <div class="icons__circle--large">
+                <i class="icon icon-user"></i>
+              </div>
+              <p class="stats__count">435</p>
+              <p class="stats__name">Clients</p>
+            </div>
+            <!-- 4th Column-->
+            <div class="stats__column">
+              <div class="icons__circle--large">
+                <i class="icon icon-like"></i>
+              </div>
+              <p class="stats__count">225</p>
+              <p class="stats__name">Awards</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------SERVICE----------------------------------->
+    <section id="service" class="section__service">
+      <!--Service part1-->
+      <div class="wrapper wrapper__service">
+        <div class="content__service">
+          <!-- Title -->
+          <div class="title">
+            <h3>Service</h3>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+              consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+            </p>
+          </div>
+          <!--Column Service-->
+          <div class="service__columns">
+            <!-- 1st Column-->
+            <div class="service__column">
+              <div class="icons__circle--small">
+                <i class="icon icon-star"></i>
+              </div>
+              <h4>Designing</h4>
+              <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in
+                elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</p>
+            </div>
+            <!-- 2nd Column-->
+            <div class="service__column">
+              <div class="icons__circle--small">
+                <i class="icon icon-lab"></i>
+              </div>
+              <h4>Developing</h4>
+              <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in
+                elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</p>
+            </div>
+            <!-- 3rd Column-->
+            <div class="service__column">
+              <div class="icons__circle--small">
+                <i class="icon icon-world"></i>
+              </div>
+              <h4>Branding</h4>
+              <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in
+                elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Divider-->
+      <div class="divider">
+        <hr class="divider--grey">
+      </div>
+      <!------------------------------------Pricing----------------------------------->
+      <div class="wrapper__pricing">
+
+        <div class="pricing__description">
+          <div class="icons__circle--base">
+            <i class="icon icon-banknote"></i>
+          </div>
+          <h4>Packege Pricing</h4>
           <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-            consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
-          </p>
+            consequat ipsum, nec
+            sagittis sem nibh id elit. </p>
         </div>
-        <!--Column Team-->
-        <div class="team__columns">
-          <!-- 1st Column-->
-          <div class="team__column">
-            <img class="team__column--picture" src="./img/team01.jpg" alt="Martin Doe">
-            <h3>john Doe</h3>
-            <span>Founder</span>
-            <!--Divider-->
-            <hr class="team__divider">
-            <p> Morbi accumsan ipsum velit.
-              Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-            <div class="social__team">
-              <div class="social__team--icons">
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-dribbble"></i>
-                <i class="fab fa-google-plus-g"></i>
-                <i class="fab fa-linkedin-in"></i>
-              </div>
+        <div class="content__pricing">
+          <!--Column Service-->
+          <div class="pricing__tables">
+            <!--Basic-->
+            <div class="pricing__item pricing__item--basic">
+              <ul>
+                <li>
+                  <span>Basic</span>
+                  <hr class="pricing__divider">
+                  <span>$35</span>
+                </li>
+                <li>First Description</li>
+                <li>Second Description</li>
+                <li>Third Description</li>
+                <li>Fourth Description</li>
+                <li>
+                  <button class="btn__inverted btn--animated">Purchase</button>
+                </li>
+              </ul>
             </div>
-            <hr class="cb">
-          </div>
-          <!-- 2nd Column-->
-          <div class="team__column">
-            <img class="team__column--picture" src="./img/team02.jpg" alt="Martin Doe">
-            <h3>Jesmine Doe</h3>
-            <span>Designer</span>
-            <!--Divider-->
-            <hr class="team__divider">
-            <p> Morbi accumsan ipsum velit.
-              Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-            <div class="social__team">
-              <div class="social__team--icons">
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-dribbble"></i>
-                <i class="fab fa-google-plus-g"></i>
-                <i class="fab fa-linkedin-in"></i>
-              </div>
+            <!--Gold-->
+            <div class="pricing__item pricing__item--gold-recommended">
+              <ul>
+                <li>
+                  <span>Gold</span>
+                  <hr class="pricing__divider">
+                  <span>$99</span>
+                </li>
+                <li>First Description</li>
+                <li>Second Description</li>
+                <li>Third Description</li>
+                <li>Fourth Description</li>
+                <li>
+                  <button class="btn btn--animated">Purchase</button>
+                </li>
+              </ul>
             </div>
-            <hr class="cb">
-          </div>
-          <!-- 3rd Column-->
-          <div class="team__column">
-            <img class="team__column--picture" src="./img/team03.jpg" alt="Martin Doe">
-            <h3>Martin Doe</h3>
-            <span>Developer</span>
-            <!--Divider-->
-            <hr class="team__divider">
-            <p> Morbi accumsan ipsum velit.
-              Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-            <div class="social__team">
-              <div class="social__team--icons">
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-dribbble"></i>
-                <i class="fab fa-google-plus-g"></i>
-                <i class="fab fa-linkedin-in"></i>
-              </div>
+            <!--Silver-->
+            <div class="pricing__item pricing__item--silver">
+              <ul>
+                <li>
+                  <span>Silver</span>
+                  <hr class="pricing__divider">
+                  <span>$65</span>
+                </li>
+                <li>First Description</li>
+                <li>Second Description</li>
+                <li>Third Description</li>
+                <li>Fourth Description</li>
+                <li>
+                  <button class="btn__inverted btn--animated">Purchase</button>
+                </li>
+              </ul>
             </div>
-            <hr class="cb">
-          </div>
-          <!-- 4th Column-->
-          <div class="team__column">
-            <img class="team__column--picture" src="./img/team04.jpg" alt="Martin Doe">
-            <h3>Anthony Doe</h3>
-            <span>Photographer</span>
-            <!--Divider-->
-            <hr class="team__divider">
-            <p> Morbi accumsan ipsum velit.
-              Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-            <div class="social__team">
-              <div class="social__team--icons">
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-dribbble"></i>
-                <i class="fab fa-google-plus-g"></i>
-                <i class="fab fa-linkedin-in"></i>
-              </div>
-            </div>
-            <hr class="cb">
           </div>
         </div>
       </div>
-    </div>
 
-  </section>
-  <!-------------------------------------STATS------------------------------------>
-  <section class="section__stats">
-    <div class="wrapper wrapper__stats">
-      <div class="content__stats">
-        <div class="stats__columns">
-          <!-- 1st Column-->
-          <div class="stats__column">
-            <div class="icons__circle--large">
-              <i class="icon icon-cup"></i>
-              <div>
+    </section>
+    <!------------------------------------REFERENCES-------------------------------->
+    <section class="section__references">
+      <div class="wrapper wrapper__references">
+
+        <!-- Carousel references -->
+        <div class="references__swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <!--Quote author-->
+              <cite class="references__author">
+                Maria Jones
+              </cite>
+              <!--Divider-->
+              <hr class="references__divider">
+              <!--Quote text-->
+              <blockquote class="references__text">
+                “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                lorem quis bibendum
+                auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.”
+              </blockquote>
+              <img class="references__picture" src="./img/references01.jpg" alt="Maria Jones">
+            </div>
+            <div class="swiper-slide">
+              <!--Quote author-->
+              <cite class="references__author">
+                Maria Jones
+              </cite>
+              <!--Divider-->
+              <hr class="references__divider">
+              <!--Quote text-->
+              <blockquote class="references__text">
+                “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                lorem quis bibendum
+                auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.”
+              </blockquote>
+              <img class="references__picture" src="./img/references02.jpg" alt="Maria Jones">
+            </div>
+            <div class="swiper-slide">
+              <!--Quote author-->
+              <cite class="references__author">
+                Maria Jones
+              </cite>
+              <!--Divider-->
+              <hr class="references__divider">
+              <!--Quote text-->
+              <blockquote class="references__text">
+                “Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                lorem quis bibendum
+                auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.”
+              </blockquote>
+              <img class="references__picture" src="./img/references03.jpg" alt="Maria Jones">
+            </div>
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination swiper-pagination-white"></div>
+        </div>
+    </section>
+    <!----------------------------------PORTFOLIO-------------------------------->
+    <section id="works" class="section__portfolio">
+      <div class="wrapper wrapper__portfolio">
+        <div class="content__portfolio">
+          <!-- Title -->
+          <div class="title">
+            <h3>Portfolio</h3>
+            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
+              consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
+            </p>
+          </div>
+          <!-- Carousel portfolio-->
+          <div class="portfolio__swiper-container">
+            <div class="swiper-wrapper">
+              <div class="portfolio__swiper-slide swiper-slide"><img src="https://picsum.photos/1170/580?random=1"
+                  alt="art work"></div>
+              <div class="portfolio__swiper-slide swiper-slide"><img src="https://picsum.photos/1170/580?random=2"
+                  alt="art work"></div>
+              <div class="portfolio__swiper-slide swiper-slide"><img src="https://picsum.photos/1170/580?random=3"
+                  alt="art work"></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="portfolio__swiper-pagination swiper-pagination swiper-pagination-white"></div>
+          </div>
+          <div class="portfolio__swiper-navigation">
+            <div>
+              <button class="portfolio__btn-previous" aria-label="previous"><i class="fas fa-chevron-left"></i></button>
+              <button class="portfolio__btn-next" aria-label="next"><i class="fas fa-chevron-right"></i></button>
+              <button class="portfolio__btn-close" aria-label="close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="portfolio__information">
+              <h4>Digital Artwork</h4>
+              <span>Graphic Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Divider-->
+      <div class="divider">
+        <hr class="divider--grey">
+      </div>
+      <!---------------------------------GALLERY--------------------------------->
+      <div class="wrapper wrapper__gallery">
+        <div class="content__gallery">
+          <div class="overlay">
+            <div class="overlay__inner">
+              <button class="close">close X</button>
+              <img>
+            </div>
+          </div>
+          <nav class="gallery__toolbar">
+            <a role="button" class="gallery__item" id="gallery__column">All Work</a>
+            <span>\\</span>
+            <a role="button" class="gallery__item" id="gallery__column--graphics">Graphics</a>
+            <span>\\</span>
+            <a role="button" class="gallery__item" id="gallery__column--webdesign">Webdesign</a>
+            <span>\\</span>
+            <a role="button" class="gallery__item" id="gallery__column--branding">Branding</a>
+            <span>\\</span>
+            <a role="button" class="gallery__item" id="gallery__column--video">Video</a>
+            <span>\\</span>
+            <a role="button" class="gallery__item  " id="gallery__column--photography">Photography</a>
+          </nav>
+          <div class="gallery__columns">
+            <div class="gallery__column gallery__column--graphics">
+              <!-- <img class="gallery__image" src="https://picsum.photos/1024/720?random=1" alt="portfolio graphics"> -->
+              <div class="gallery__container">
+                <img class="gallery__image" src="https://picsum.photos/1024/720?random=1" alt="portfolio graphics">
+                <div class="gallery__overlay--image">
+                  <span class="gallery__overlay--zoom-circle"></span>
+                  <span class="gallery__overlay--zoom-horizontalLine"></span>
+                  <span class="gallery__overlay--zoom-verticalLine"></span>
+                </div>
+              </div>
+              <h6>Project title here</h6>
+              <p>Graphics</p>
+              <div class="gallery__overlay">
+                <div class="overlay__background">
+                  <span class="overlay__circle"></span>
+                  <span class="overlay__line-horizontal"></span>
+                  <span class="overlay__line-vertical"></span>
+                </div>
               </div>
             </div>
-            <p class="stats__count">6K+</p>
-            <p class="stats__name">Coffees</p>
-          </div>
-          <!-- 2nd Column-->
-          <div class="stats__column">
-            <div class="icons__circle--large">
-              <i class="icon icon-stack"></i>
+            <div class="gallery__column gallery__column--photography">
+              <!-- <img class="gallery__image" src="https://picsum.photos/1024/720?random=2" alt="portfolio photography"> -->
+              <div class="gallery__container">
+                <img class="gallery__image" src="https://picsum.photos/1024/720?random=2" alt="portfolio photography">
+                <div class="gallery__overlay--image">
+                  <span class="gallery__overlay--zoom-circle"></span>
+                  <span class="gallery__overlay--zoom-horizontalLine"></span>
+                  <span class="gallery__overlay--zoom-verticalLine"></span>
+                </div>
+              </div>
+              <h6>Project title here</h6>
+              <p>Photography</p>
             </div>
-            <p class="stats__count">743</p>
-            <p class="stats__name">Projects</p>
-          </div>
-          <!-- 3rd Column-->
-          <div class="stats__column">
-            <div class="icons__circle--large">
-              <i class="icon icon-user"></i>
+            <div class="gallery__column gallery__column--branding">
+              <!-- <img class="gallery__image" src="https://picsum.photos/1024/720?random=3" alt="portfolio branding"> -->
+              <div class="gallery__container">
+                <img class="gallery__image" src="https://picsum.photos/1024/720?random=3" alt="portfolio branding">
+                <div class="gallery__overlay--image">
+                  <span class="gallery__overlay--zoom-circle"></span>
+                  <span class="gallery__overlay--zoom-horizontalLine"></span>
+                  <span class="gallery__overlay--zoom-verticalLine"></span>
+                </div>
+              </div>
+              <h6>Project title here</h6>
+              <p>Branding</p>
             </div>
-            <p class="stats__count">435</p>
-            <p class="stats__name">Clients</p>
-          </div>
-          <!-- 4th Column-->
-          <div class="stats__column">
-            <div class="icons__circle--large">
-              <i class="icon icon-like"></i>
+            <div class="gallery__column gallery__column--graphics">
+              <!-- <img class="gallery__image" src="https://picsum.photos/1024/720?random=4" alt="portfolio graphics"> -->
+              <div class="gallery__container">
+                <img class="gallery__image" src="https://picsum.photos/1024/720?random=4" alt="portfolio graphics">
+                <div class="gallery__overlay--image">
+                  <span class="gallery__overlay--zoom-circle"></span>
+                  <span class="gallery__overlay--zoom-horizontalLine"></span>
+                  <span class="gallery__overlay--zoom-verticalLine"></span>
+                </div>
+              </div>
+              <h6>Project title here</h6>
+              <p>Graphics</p>
             </div>
-            <p class="stats__count">225</p>
-            <p class="stats__name">Awards</p>
+            <div class="gallery__column gallery__column--webdesign">
+              <!-- <img class="gallery__image" src="https://picsum.photos/1024/720?random=5" alt="portfolio webdesign"> -->
+              <div class="gallery__container">
+                <img class="gallery__image" src="https://picsum.photos/1024/720?random=5" alt="portfolio webdesign">
+                <div class="gallery__overlay--image">
+                  <span class="gallery__overlay--zoom-circle"></span>
+                  <span class="gallery__overlay--zoom-horizontalLine"></span>
+                  <span class="gallery__overlay--zoom-verticalLine"></span>
+                </div>
+              </div>
+              <h6>Project title here</h6>
+              <p>Web Design</p>
+            </div>
+            <div class="gallery__column gallery__column--video">
+              <!-- <img class="gallery__image" src="https://picsum.photos/1024/720?random=6" alt="portfolio video"> -->
+              <div class="gallery__container">
+                <img class="gallery__image" src="https://picsum.photos/1024/720?random=6" alt="portfolio video">
+                <div class="gallery__overlay--image">
+                  <span class="gallery__overlay--zoom-circle"></span>
+                  <span class="gallery__overlay--zoom-horizontalLine"></span>
+                  <span class="gallery__overlay--zoom-verticalLine"></span>
+                </div>
+              </div>
+              <h6>Project title here</h6>
+              <p>Video</p>
+            </div>
+            <div class="gallery__column gallery__column--photography">
+              <!-- <img class="gallery__image" src="https://picsum.photos/1024/720?random=7" alt="portfolio photography"> -->
+              <div class="gallery__container">
+                <img class="gallery__image" src="https://picsum.photos/1024/720?random=7" alt="portfolio photography">
+                <div class="gallery__overlay--image">
+                  <span class="gallery__overlay--zoom-circle"></span>
+                  <span class="gallery__overlay--zoom-horizontalLine"></span>
+                  <span class="gallery__overlay--zoom-verticalLine"></span>
+                </div>
+              </div>
+              <h6>Project title here</h6>
+              <p>Photography</p>
+            </div>
+            <div class="gallery__column gallery__column--branding">
+              <!-- <img class="gallery__image" src="https://picsum.photos/1024/720?random=8" alt="portfolio branding"> -->
+              <div class="gallery__container">
+                <img class="gallery__image" src="https://picsum.photos/1024/720?random=8" alt="portfolio branding">
+                <div class="gallery__overlay--image">
+                  <span class="gallery__overlay--zoom-circle"></span>
+                  <span class="gallery__overlay--zoom-horizontalLine"></span>
+                  <span class="gallery__overlay--zoom-verticalLine"></span>
+                </div>
+              </div>
+              <h6>Project title here</h6>
+              <p>Branding</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!------------------------------------SERVICE----------------------------------->
-  <section id="service" class="section__service">
-    <!--Service part1-->
-    <div class="wrapper wrapper__service">
-      <div class="content__service">
-        <!-- Title -->
-        <div class="title">
-          <h2>Service</h2>
-          <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-            consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet
-          </p>
-        </div>
-        <!--Column Service-->
-        <div class="service__columns">
-          <!-- 1st Column-->
-          <div class="service__column">
-            <div class="icons__circle--small">
-              <i class="icon icon-star"></i>
-            </div>
-            <h3>Designing</h3>
-            <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in
-              elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</p>
-          </div>
-          <hr class="cb">
-          <!-- 2nd Column-->
-          <div class="service__column">
-            <div class="icons__circle--small">
-              <i class="icon icon-lab"></i>
-            </div>
-            <h3>Developing</h3>
-            <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in
-              elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</p>
-          </div>
-          <hr class="cb">
-          <!-- 3rd Column-->
-          <div class="service__column">
-            <div class="icons__circle--small">
-              <i class="icon icon-world"></i>
-            </div>
-            <h3>Branding</h3>
-            <p>Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in
-              elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per</p>
-          </div>
-          <hr class="cb">
-        </div>
-      </div>
-    </div>
-    <!--Divider-->
-    <div class="divider">
-      <div class="divider--grey"></div>
-    </div>
-    <!------------------------------------Pricing----------------------------------->
-    <div class="wrapper__pricing">
+    </section>
 
-      <div class="pricing__description">
-        <div class="icons__circle--base">
-          <i class="icon icon-banknote"></i>
-        </div>
-        <h3>Packege Pricing</h3>
-        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-          consequat ipsum, nec
-          sagittis sem nibh id elit. </p>
-      </div>
-      <div class="content__pricing">
-        <!--Column Service-->
-        <div class="pricing__tables">
-          <!--Basic-->
-          <div class="pricing__item--basic">
-            <ul>
-              <li>
-                <span>Basic</span>
-                <hr class="pricing__divider">
-                <span>$35</span>
-              </li>
-              <li>First Description</li>
-              <li>Second Description</li>
-              <li>Third Description</li>
-              <li>Fourth Description</li>
-              <li>
-                <button class="btn__inverted btn--animated">Purchase</button>
-              </li>
-            </ul>
-          </div>
-          <!--Gold-->
-          <div class="pricing__item--gold-recommended">
-            <ul>
-              <li>
-                <span>Gold</span>
-                <hr class="pricing__divider">
-                <span>$99</span>
-              </li>
-              <li>First Description</li>
-              <li>Second Description</li>
-              <li>Third Description</li>
-              <li>Fourth Description</li>
-              <li>
-                <button class="btn btn--animated">Purchase</button>
-              </li>
-            </ul>
-          </div>
-          <!--Silver-->
-          <div class="pricing__item--silver">
-            <ul>
-              <li>
-                <span>Silver</span>
-                <hr class="pricing__divider">
-                <span>$65</span>
-              </li>
-              <li>First Description</li>
-              <li>Second Description</li>
-              <li>Third Description</li>
-              <li>Fourth Description</li>
-              <li>
-                <button class="btn__inverted btn--animated">Purchase</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
 
-    </div>
-  </section>
   <!--Jquery-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <!-- FONT AWESOME -->
   <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
+  <!-- SWIPER -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <!--Local-->
   <script src="./js/script.js"></script>
+
 </body>
 
 </html>

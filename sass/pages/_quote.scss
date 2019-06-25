@@ -1,19 +1,17 @@
 // /*---Wrapper---*/
-.wrapper {
-  &__quote {
-    color: #ffffff;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    @include wrapper(15.15em, 15.15em);
-  }
+.wrapper__quote {
+  @include wrapper(15.15em, 15.15em);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .quote {
   &__text {
     position: relative;
     text-align: center;
-    font-size: 45px;
-    max-width: 960px;
+    font-size: 2.8125rem;
+    max-width: 60rem;
     line-height: 3.8rem;
 
     &:before {
@@ -27,11 +25,11 @@
 
   &__author {
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   &__divider {
-    @include divider(2px, 50px, $orange);
-    margin: 32px 0 10px 0;
+    @include divider(2px, 3.125rem, $orange);
+    margin: 2rem 0 0.625rem 0;
     border: 1px solid rgba(0, 0, 0, 0);
   }
 }

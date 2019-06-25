@@ -1,0 +1,65 @@
+.swiper-wrapper {
+  z-index: 0;
+}
+.swiper-pagination-white > .swiper-pagination-bullet {
+  background-color: #fff;
+}
+
+// Carousel Header
+.main__swiper-container {
+  @extend %fullsize;
+  & > .swiper-pagination-bullets {
+    bottom: 1rem;
+    left: 2.1rem;
+    & .swiper-pagination-bullet {
+      margin: 0 2px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+// Carousel References
+.references__swiper-container {
+  @extend %fullsize;
+  & > .swiper-pagination-bullets {
+    bottom: 11.875rem;
+    left: 2rem;
+    & .swiper-pagination-bullet {
+      margin: 0 2px;
+      width: 11px;
+      height: 11px;
+    }
+  }
+}
+// Carousel Portofolio
+.portfolio__swiper {
+  &-container {
+    overflow: hidden;
+    height: 36.25rem;
+    width: 73rem;
+    margin: 0 0 3.125rem 4.0625rem;
+    & > .swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 3px 0;
+      width: 15px;
+      height: 15px;
+    }
+  }
+  &-pagination {
+    position: static;
+    height: 68.5vh;
+    margin-right: 1.1rem;
+  }
+  &-slide.swiper-slide.swiper-slide {
+    & > img {
+      height: 36.25rem;
+      width: 73.125rem;
+    }
+    &-active {
+      z-index: 1;
+      & > img {
+        height: 36.25rem;
+        width: 73.125rem;
+      }
+    }
+  }
+}

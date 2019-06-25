@@ -1,7 +1,88 @@
+/* TEST */
+@mixin media($size) {
+  @if $size == phone {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == tablet {
+    @media (min-width: 600px) { @content; }
+  } @else if $size == tablet-xl {
+    @media (min-width: 900px) { @content; }
+  } @else if $size == portable {
+    @media (min-width: 1200px) { @content; }
+  } @else if $size == desktop {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+//MIXINS
+
+//transitions mixin
+@mixin transition-mix($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
+transition-property: $property;
+transition-duration: $duration;
+transition-timing-function: $timing;
+transition-delay: $delay;
+}
+
+//position absolute mixin
+@mixin position-absolute($top: null, $left: null, $right: null, $bottom: null) {
+position: absolute;
+top: $top;
+left: $left;
+right: $right;
+bottom: $bottom;
+}
+
+// Burger Menu mixin
+@mixin burgermenu-open-right ($side : 0) {
+right: $side;
+@include transition-mix($property: right);
+}
+@mixin burgermenu-open-left ($side : 0) {
+left: $side;
+@include transition-mix($property: left);
+}
+
+
+
+
+
+
+
+
 // Wrapper
 @mixin wrapper($padding-top, $padding-bottom) {
   padding-top: $padding-top;
   padding-bottom: $padding-bottom;
+}
+// Flexbox
+//--flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+//--flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+//--row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+//--nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+  -moz-flex-wrap: $wrap;
+  -ms-flex-wrap: $wrap;
+  flex-wrap: $wrap;
 }
 // Columns
 @mixin n-columns($min-width, $gutter, $last-equal: false, $max-cols: 5) {
@@ -10,12 +91,10 @@
     flex-wrap: wrap;
     margin-left: -$gutter;
     margin-top: -$gutter;
-
     &__column {
       flex: 1 0 $min-width;
       margin-left: $gutter;
       margin-top: $gutter;
-
       @if $last-equal {
         @for $i from 2 through $max-cols {
           $screen-width: ($min-width * $i)+ ($gutter * $i);
@@ -24,7 +103,6 @@
             max-width: calc(#{$column-width} - #{$gutter});
           }
         }
-
         $column-width: (100% / $max-cols);
         @media (min-width: $min-width*$max-cols) {
           min-width: calc(#{$column-width} - #{$gutter});
@@ -100,7 +178,6 @@
   font-weight: 400;
 }
 // Animation Button
-
 //--- Drawing effect
 @mixin btn-border-drawing(
   $color: #ccc,
@@ -181,8 +258,8 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   content: "";
-  height: 95px;
-  top: -95px;
+  height: 5.9375rem;
+  top: -5.9375rem;
   right: 0;
   left: 0;
   width: 100%;
@@ -197,7 +274,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   content: "";
-  height: 95px;
+  height: 5.9375rem;
   top: 0px;
   right: 0;
   left: 0;
@@ -219,7 +296,7 @@
 
 //--- marks RIGHT
 @mixin quotationRight {
-  font-size: 110px;
+  font-size: 6.875rem;
   content: "\00201D";
   position: absolute;
   top: 16px;
@@ -228,9 +305,9 @@
 
 //--- marks LEFT
 @mixin quotationLeft {
-  font-size: 110px;
+  font-size: 6.875rem;
   content: "\00201C";
   position: absolute;
-  top: 16px;
-  left: -55px;
+  top: 1rem;
+  left: -3.4375rem;
 }

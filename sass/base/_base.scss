@@ -1,5 +1,5 @@
 body {
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.75;
   font-family: "Open Sans", sans-serif;
   color: $grey;
@@ -20,44 +20,52 @@ li {
   }
 }
 
-@for $index from 1 through 3 {
+@for $index from 1 through 2 {
   h#{$index} {
-    font-weight: 700;
-  }
-}
-
-@for $index from 5 through 6 {
-  h#{$index} {
-    font-weight: 700;
-  }
-}
-
-@for $index from 2 through 6 {
-  h#{$index} {
-    color: $black;
+    font-weight: 300;
+    color: #fff;
+    line-height: 6.875rem;
   }
 }
 
 h1 {
-  font-size: 70px;
-  line-height: 29px;
-  letter-spacing: -4px;
+  font-size: 2.8125rem;
+  letter-spacing: -1px;
 }
 
 h2 {
-  font-size: 30px;
+  padding-bottom: 3.4375rem;
+  font-size: 2.5rem;
+  letter-spacing: -2px;
+}
+
+@for $index from 3 through 6 {
+  h#{$index} {
+    color: $black;
+  }
+}
+@for $index from 3 through 4 {
+  h#{$index} {
+    font-weight: 700;
+  }
+}
+h3 {
+  font-size: 1.875rem;
   line-height: 1.5em;
   border-right: 4px solid $orange;
 }
 
-h3 {
-  font-size: 20px;
-  line-height: 16px;
-}
-
 h4 {
+  font-size: 1.25rem;
+  line-height: 1rem;
+}
+h5 {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1em;
-  padding-bottom: 11px;
+  padding-bottom: 0.6875rem;
+}
+h6 {
+  font-size: 0.9375rem;
+  font-weight: 700;
 }

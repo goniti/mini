@@ -1,6 +1,16 @@
 // Navbar
 .navbar {
   @extend %centerer;
+  &__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+// Carousel
+.swiper-slide {
+  @extend %centerer;
+  @extend %column;
 }
 // Wrapper
 .wrapper {
@@ -25,15 +35,15 @@
   //---About--inner
   &__about--inner {
     @extend %center;
-
+    @extend %wrap;
     //---About--inner-right
     &-right {
-      display: flex;
+      @extend %flex;
       @extend %wrap;
     }
     &-left {
       @extend %center;
-      align-items: flex-end;
+      @extend %align-items-end;
     }
   }
 }
@@ -44,7 +54,7 @@
 // Title
 .title {
   @extend %centerer;
-  & > h2 {
+  & > h3 {
     @extend %centerer-right;
   }
 }
@@ -67,12 +77,41 @@
 // Pricing
 .pricing {
   &__tables {
-    //@extend %centerer-right;
     @extend %centerer;
-
     @extend %wrap;
   }
   &__item > ul > :last-child {
+    @extend %centerer;
+  }
+}
+// Portfolio
+.portfolio__swiper {
+  &-pagination {
+    @extend %flex;
+    @extend %justify-content-start;
+    @extend %align-items-end;
+    @extend %column;
+  }
+  &-navigation {
+    @extend %centerer;
+    @extend %column;
+  }
+}
+
+// Gallery
+.gallery__columns {
+  //for mobil : @extend %center;
+  @extend %justify-content-end;
+}
+.content__gallery {
+  @extend %centerer;
+  @extend %column;
+}
+.gallery__overlay {
+  &--image {
+    @extend %centerer;
+  }
+  &--zoom-circle {
     @extend %centerer;
   }
 }

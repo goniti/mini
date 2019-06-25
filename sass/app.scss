@@ -11,16 +11,14 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/placeholders";
-
-/* Layouts*/
-@import "layouts/grid";
-@import "layouts/responsive";
+@import "helpers/animate";
 
 // Base
 @import "base/base";
 
 // Components
 @import "components/btn";
+@import "components/carousel";
 @import "components/icons";
 @import "components/logo";
 @import "components/progressbar";
@@ -28,12 +26,20 @@
 @import "components/title";
 @import "components/iphone-8";
 @import "components/ipad-pro";
+@import "components/burgermenu";
+@import "components/navbar";
 
 // Pages
-@import "pages/about";
 @import "pages/main";
-@import "pages/pricing";
+@import "pages/about";
 @import "pages/quote";
-@import "pages/service";
-@import "pages/stats";
 @import "pages/team";
+@import "pages/stats";
+@import "pages/service";
+@import "pages/references";
+@import "pages/portfolio";
+
+
+/* Layouts*/
+@import "layouts/grid";
+@import "layouts/responsive";
