@@ -1,4 +1,4 @@
-.burgerMenu {
+.burgermenu {
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -23,7 +23,11 @@
     opacity: 1;
     visibility: visible;
   }
-
+  &__link--is-active {
+    > .burgermenu__list--item-link {
+      color: $burgermenu-color-hover;
+    }
+  }
   /* list styles */
   &__list {
     position: relative;
@@ -42,9 +46,10 @@
         align-items: center;
         color: $burgermenu-color;
         text-decoration: none;
-        .svg-inline--fa.fa-w-14,.svg-inline--fa.fa-w-18 {
+        .svg-inline--fa.fa-w-14,
+        .svg-inline--fa.fa-w-18 {
           width: 2.1em;
-      }
+        }
         &:hover {
           color: $burgermenu-color-hover;
         }

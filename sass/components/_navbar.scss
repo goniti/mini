@@ -14,7 +14,7 @@
   &__items {
     text-transform: uppercase;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     //-- Navbar-divider '\\'
     & > span {
       padding: 0 2.25rem;
@@ -55,8 +55,9 @@
     // Add background of navigation bar on first scroll
     &-background {
       top: 0;
-      background: $theme-color1;
-      box-shadow: 0 0 2px $theme-color1;
+      background: $theme-color;
+      box-shadow: 0 0 2px $theme-color;
+      opacity: 0.95;
       @include transition(all 0.5s ease-in-out);
     }
     // Reduce navigation bar on scroll

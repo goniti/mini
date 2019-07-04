@@ -37,7 +37,18 @@ section {
     margin-bottom: 1px;
     background: url(../img/bg__section-03.jpg) center top fixed;
     @include background-size(cover);
-    overflow: hidden;
+  }
+  &__news {
+    padding-left: 4.0625rem;
+    margin-bottom: 1px;
+    background: url(../img/bg__section-04.jpg) center top fixed;
+    @include background-size(cover);
+  }
+  &__client {
+    padding-left: 4.0625rem;
+    margin-bottom: 1px;
+    background: url(../img/bg__section-05.jpg) center top fixed;
+    @include background-size(cover);
   }
 }
 /*---Divider---*/

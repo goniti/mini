@@ -9,13 +9,15 @@
   }
   &__circle--small {
     @include circle(100px, 2px $orange, $transparent);
-    margin: 0 auto;
+    &-white {
+      border: solid 2px $white;
+    }
   }
   &__circle--large {
     @include circle(165px, 2px $orange, $transparent);
     margin: 0 auto;
   }
-  &__about{
+  &__about {
     margin-right: 30px;
   }
 }
