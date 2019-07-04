@@ -2494,13 +2494,6 @@ h5 span {
 }
 
 @media (max-width: 599px) {
-  /* line 41, ../sass/layouts/_responsive.scss */
-  .wrapper {
-    justify-content: flex-start;
-  }
-}
-
-@media (max-width: 599px) {
   /* line 48, ../sass/layouts/_responsive.scss */
   .navbar {
     height: 60px !important;
