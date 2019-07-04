@@ -1,4 +1,9 @@
 // ON PHONE
+body {
+  @include media(phone) {
+    font-size: 0.85rem;
+  }
+}
 h1 {
   @include media(phone) {
     font-size: 1.8rem;
@@ -6,11 +11,17 @@ h1 {
 }
 h2 {
   @include media(phone) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+}
+p {
+  @include media(phone) {
+    max-width: 85vw;
   }
 }
 .title {
   @include media(phone) {
+    max-width: 95vw;
     flex-direction: column;
     align-items: flex-start;
     & > h3 {
@@ -27,6 +38,11 @@ h2 {
     margin-left: 0;
   }
 }
+// .wrapper {
+//   @include media(phone) {
+//     justify-content: flex-start;
+//   }
+// }
 
 //NAVBAR
 .navbar {
@@ -78,7 +94,7 @@ h2 {
   }
 }
 // Show button burger menu on phone
-.burgerMenu__btn--open {
+.burgermenu__btn--open {
   @include media(phone) {
     display: flex;
   }
@@ -101,9 +117,9 @@ h2 {
     &--inner > p {
       padding-left: 0;
       font-weight: 700;
-      font-size: 1.55rem;
+      font-size: 1rem;
       line-height: 3.1875rem;
-      letter-spacing: -3px;
+      letter-spacing: -1px;
     }
   }
 }
@@ -124,16 +140,16 @@ h2 {
 .icons__about {
   @include media(phone) {
     margin-right: 0;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+    padding-bottom: 0.5rem;
+    width: 90%;
   }
 }
 
 .content__about--inner {
   @include media(phone) {
-    margin-left: 0;
+    margin-left: 1rem;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 .content__about--inner-left {
@@ -144,6 +160,9 @@ h2 {
 .content__about--inner-right {
   @include media(phone) {
     flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
     & > ul {
       width: 90%;
     }
@@ -164,16 +183,24 @@ h2 {
 }
 .stats__column {
   @include media(phone) {
-    padding: 10px 100px;
-    width: 100%;
     display: flex;
-    /* justify-content: space-between; */
-    align-items: baseline;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
   }
 }
 .icons__circle--large {
   @include media(phone) {
-    margin: 0 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+// SERVICES
+.service__columns {
+  @include media(phone) {
+    margin: 0;
   }
 }
 
@@ -183,7 +210,11 @@ h2 {
     margin-left: 0;
   }
 }
-
+.pricing__description {
+  @include media(phone) {
+    margin-left: 1.75rem;
+  }
+}
 .pricing__item {
   @include media(phone) {
     width: 100%;
@@ -206,6 +237,7 @@ h2 {
 .references__swiper-container > .swiper-pagination-bullets {
   @include media(phone) {
     left: 0;
+    bottom: 8rem;
   }
 }
 
@@ -222,6 +254,14 @@ h2 {
     &:before,
     &:after {
       font-size: 3.875rem;
+    }
+    &::before {
+      top: 0rem;
+      left: 0.3rem;
+    }
+    &::after {
+      top: 0rem;
+      right: 0.3rem;
     }
   }
 }
@@ -256,6 +296,22 @@ h2 {
   }
 }
 
+// GALLERY
+.gallery__columns {
+  @include media(phone) {
+    justify-content: center;
+  }
+}
+.gallery__toolbar {
+  @include media(phone) {
+    font-size: 0.7rem;
+    margin-left: 1rem;
+    max-width: 90vw;
+    & > span {
+      padding: 0 0.35rem;
+    }
+  }
+}
 /* Tablet*/
 .navbar__menu {
   @include media(tablet-xl) {
@@ -272,5 +328,27 @@ h2 {
   @include media(desktop) {
     width: 60%;
     margin-left: 0;
+  }
+}
+
+/* ON PORTABLE*/
+
+.content__about--inner-right {
+  @include media(portable) {
+    width: 45%;
+    margin-left: 4.0625rem;
+    justify-content: flex-start;
+  }
+}
+
+.content__about--inner-left {
+  @include media(portable) {
+    display: flex;
+  }
+}
+
+.content__about--inner {
+  @include media(portable) {
+    margin-left: 4.1875rem;
   }
 }
