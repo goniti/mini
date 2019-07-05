@@ -1,4 +1,4 @@
-// ON PHONE
+/*---------------------------ON PHONE-----------------------------*/
 body {
   @include media(phone) {
     font-size: 0.85rem;
@@ -38,43 +38,12 @@ p {
     margin-left: 0;
   }
 }
-// .wrapper {
-//   @include media(phone) {
-//     justify-content: flex-start;
-//   }
-// }
 
-//NAVBAR
+ //NAVBAR
 .navbar {
   @include media(phone) {
     height: 60px !important;
     top: 0;
-  }
-  //navbar menu
-  &__menu {
-    @include media(phone) {
-      width: 95%;
-      &--side-right {
-        right: 1rem;
-      }
-    }
-
-    &--items {
-      @include media(phone) {
-        display: none;
-      }
-    }
-    &--title {
-      @include media(phone) {
-        font-size: 16px;
-      }
-    }
-    &-scrolled {
-      @include media(phone) {
-        padding-left: 0;
-        margin-top: 0;
-      }
-    }
   }
 }
 
@@ -91,12 +60,6 @@ p {
       height: 3.0625rem;
       font-size: 1rem;
     }
-  }
-}
-// Show button burger menu on phone
-.burgermenu__btn--open {
-  @include media(phone) {
-    display: flex;
   }
 }
 
@@ -312,27 +275,99 @@ p {
     }
   }
 }
-/* Tablet*/
-.navbar__menu {
-  @include media(tablet-xl) {
-    width: 90%;
-    margin-left: 0;
-    &-scrolled {
-      padding-left: 0;
+
+// Contact
+.contact__info {
+  @include media(phone) {
+    width: 85vw;
+  }
+}
+.contact__form {
+  @include media(phone) {
+    width: 80vw;
+  }
+  & input {
+    @include media(phone) {
+      width: 65vw;
     }
   }
 }
 
-/* Desktop*/
-.navbar__menu {
-  @include media(desktop) {
-    width: 60%;
-    margin-left: 0;
+.footer__copyright {
+  @include media(phone) {
+    font-size: 9px;
   }
 }
 
-/* ON PORTABLE*/
+/*-------------------Tablet-xl------------------------------*/
+// button burger menu on phone
+.burgermenu__btn--open {
+  @include media(tablet-xl) {
+    display: none;
+  }
+}
 
+//NAVBAR
+.navbar {
+  &__items {
+    @include media(tablet-xl) {
+      display: flex;
+    }
+  }
+  //navbar menu
+  &__menu {
+    @include media(tablet-xl) {
+      width: 96%;
+      margin-left: 0;
+      &-scrolled {
+        padding-left: 0;
+      }
+    }
+    &--title {
+      @include media(tablet-xl) {
+        font-size: 40px;
+      }
+    }
+    &-scrolled {
+      @include media(tablet-xl) {
+        padding-left: 50px;
+      }
+    }
+  }
+}
+
+
+/*-------------------------------Desktop----------------------------*/
+.navbar__menu {
+  @include media(desktop) {
+    width: 60%;
+    margin-left: 65px;
+  }
+}
+
+/*------------------------------ON PORTABLE--------------------------*/
+
+
+h1 {
+  @include media(portable) {
+  
+  font-size: 2.8125rem;
+
+  }
+}
+h2 {
+  @include media(portable) {
+    font-size: 2.5rem;
+  }
+}
+.content__hero {
+  @include media(portable) {
+    &--inner > p {
+      padding-left: 1.875rem;
+      font-size: 4.375rem;
+    }
+  }
+}
 .content__about--inner-right {
   @include media(portable) {
     width: 45%;
@@ -350,5 +385,42 @@ p {
 .content__about--inner {
   @include media(portable) {
     margin-left: 4.1875rem;
+  }
+}
+.section {
+  &__client {
+    @include media(portable) {
+      padding-left: 4.0625rem;
+    }
+  }
+  &__news {
+    @include media(portable) {
+      padding-left: 4.0625rem;
+    }
+  }
+}
+.content__contact {
+  @include media(portable) {
+    flex-direction: row;
+    padding-left: 55px;
+  }
+}
+
+.contact {
+  &__form input {
+    @include media(portable) {
+      width: 29.5vw;
+    }
+  }
+  &__info {
+    @include media(portable) {
+      width: 24.5vw;
+    }
+  }
+}
+
+.content__footer {
+  @include media(portable) {
+    padding-left: 65px;
   }
 }

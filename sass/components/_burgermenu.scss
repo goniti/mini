@@ -109,7 +109,7 @@
     }
     &--open {
       //show only with media Phone
-      display: none;
+      display: flex;
       @include transition-mix();
       width: 35px;
       height: 25px;
