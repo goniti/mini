@@ -70,7 +70,6 @@ $(document).ready(function () {
         slidesPerView: 1,
         spaceBetween: 60,
         effect: 'fade',
-        mousewheel: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
