@@ -2401,7 +2401,7 @@ h5 span {
 
 /* line 6, ../sass/pages/_blog.scss */
 .content__blog {
-  width: 65vw;
+  width: 80vw;
 }
 /* line 8, ../sass/pages/_blog.scss */
 .content__blog .title {
@@ -2474,7 +2474,13 @@ h5 span {
   padding-bottom: 14.25em;
 }
 
-/* line 7, ../sass/pages/_client.scss */
+/* line 6, ../sass/pages/_client.scss */
+.content__client {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* line 10, ../sass/pages/_client.scss */
 .content__client p {
   font-size: 30px;
   font-weight: bold;
@@ -2482,7 +2488,7 @@ h5 span {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 14, ../sass/pages/_client.scss */
+/* line 17, ../sass/pages/_client.scss */
 .content__client--items {
   padding-top: 1.1rem;
   display: flex;
@@ -2490,7 +2496,7 @@ h5 span {
   align-items: center;
   flex-wrap: wrap;
 }
-/* line 20, ../sass/pages/_client.scss */
+/* line 23, ../sass/pages/_client.scss */
 .content__client--items :hover, .content__client--items :hover > img {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -2498,7 +2504,7 @@ h5 span {
   transition: all 0.3s ease-in-out;
   transform: scale(1.1);
 }
-/* line 27, ../sass/pages/_client.scss */
+/* line 30, ../sass/pages/_client.scss */
 .content__client--items-logo {
   border: #8c8c8c 1px solid;
   width: 255px;
@@ -3142,6 +3148,13 @@ h5 span {
 
 @media (min-width: 1200px) {
   /* line 402, ../sass/layouts/_responsive.scss */
+  .content__client {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* line 407, ../sass/layouts/_responsive.scss */
   .content__contact {
     flex-direction: row;
     padding-left: 55px;
@@ -3149,20 +3162,20 @@ h5 span {
 }
 
 @media (min-width: 1200px) {
-  /* line 410, ../sass/layouts/_responsive.scss */
+  /* line 415, ../sass/layouts/_responsive.scss */
   .contact__form input, .contact__form textarea {
     width: 29.5vw;
   }
 }
 @media (min-width: 1200px) {
-  /* line 415, ../sass/layouts/_responsive.scss */
+  /* line 420, ../sass/layouts/_responsive.scss */
   .contact__info {
     width: 24.5vw;
   }
 }
 
 @media (min-width: 1200px) {
-  /* line 422, ../sass/layouts/_responsive.scss */
+  /* line 427, ../sass/layouts/_responsive.scss */
   .content__footer {
     padding-left: 65px;
   }
