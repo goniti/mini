@@ -32,6 +32,9 @@
 %justify-content-center {
   @include justify-content(center);
 }
+%justify-content-space-between {
+  @include justify-content(space-between);
+}
 // Flex align
 %align-items-start {
   @include align-items(flex-start);

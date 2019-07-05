@@ -3,7 +3,6 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "compass";
-
 // Reset
 @import "compass/reset";
 
@@ -41,6 +40,8 @@
 @import "pages/news";
 @import "pages/blog";
 @import "pages/client";
+@import "pages/contact";
+@import "pages/footer";
 
 /* Layouts*/
 @import "layouts/grid";

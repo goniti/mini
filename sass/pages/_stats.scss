@@ -24,7 +24,7 @@
       @include filter(100%, 100%, 0%, 35deg, 104%, 107%);
     }
   }
-  &__count {
+  &__count:not(:first-child) {
     font-size: 2.8125rem;
     line-height: 0.7;
     padding-top: 1.875rem;
@@ -32,4 +32,8 @@
   &__name {
     font-size: 1.5625rem;
   }
+}
+
+.stats__count--minify {
+  @extend .stats__count;
 }

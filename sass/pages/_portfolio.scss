@@ -3,6 +3,9 @@
 .wrapper__portfolio {
   @include wrapper(6.1em, 6.1rem);
 }
+.content__portfolio {
+max-width: 98vw;
+}
 .portfolio {
   &__btn {
     padding: 0.4375rem 0.7188rem;

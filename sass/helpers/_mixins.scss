@@ -1,53 +1,123 @@
-/* TEST */
+//MIXINS
+
 @mixin media($size) {
   @if $size == phone {
-    @media (max-width: 599px) { @content; }
+    @media (max-width: 599px) {
+      @content;
+    }
   } @else if $size == tablet {
-    @media (min-width: 600px) { @content; }
+    @media (min-width: 600px) {
+      @content;
+    }
   } @else if $size == tablet-xl {
-    @media (min-width: 900px) { @content; }
+    @media (min-width: 900px) {
+      @content;
+    }
   } @else if $size == portable {
-    @media (min-width: 1200px) { @content; }
+    @media (min-width: 1200px) {
+      @content;
+    }
   } @else if $size == desktop {
-    @media (min-width: 1800px) { @content; }
+    @media (min-width: 1800px) {
+      @content;
+    }
   }
 }
 
-//MIXINS
+@mixin font($size: false, $colour: false, $weight: false, $lh: false, $ls: false) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $ls {
+    letter-spacing: $ls;
+  }
+}
+
+// Selection mixin
+$prefixes: ("-moz-", "-webkit-", "-o-", "-ms-", "");
+@mixin selection($color, $background) {
+  @each $prefix in $prefixes {
+    ::#{$prefix}selection {
+      color: $color;
+      background: $background;
+    }
+  }
+}
+
+// Custom scrollbar mixin
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 25%)) {
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+//PlaceHolder mixin
+
+@mixin placeholder($color: $custom-placeholder) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
 
 //transitions mixin
 @mixin transition-mix($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
-transition-property: $property;
-transition-duration: $duration;
-transition-timing-function: $timing;
-transition-delay: $delay;
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
 }
 
 //position absolute mixin
 @mixin position-absolute($top: null, $left: null, $right: null, $bottom: null) {
-position: absolute;
-top: $top;
-left: $left;
-right: $right;
-bottom: $bottom;
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
 }
 
 // Burger Menu mixin
-@mixin burgermenu-open-right ($side : 0) {
-right: $side;
-@include transition-mix($property: right);
+@mixin burgermenu-open-right($side: 0) {
+  right: $side;
+  @include transition-mix($property: right);
 }
-@mixin burgermenu-open-left ($side : 0) {
-left: $side;
-@include transition-mix($property: left);
+@mixin burgermenu-open-left($side: 0) {
+  left: $side;
+  @include transition-mix($property: left);
 }
-
-
-
-
-
-
-
 
 // Wrapper
 @mixin wrapper($padding-top, $padding-bottom) {
@@ -89,6 +159,7 @@ left: $side;
   &__columns {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-left: -$gutter;
     margin-top: -$gutter;
     &__column {
@@ -280,16 +351,6 @@ left: $side;
   left: 0;
   width: 100%;
   z-index: 1;
-}
-
-// Progress Bar
-@mixin progressPercentage($progress, $padding-bottom) {
-  padding-bottom: $padding-bottom;
-
-  div.progressbar div {
-    width: $progress;
-    background: $orange;
-  }
 }
 
 // QUOTATION

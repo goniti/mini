@@ -1,0 +1,40 @@
+/*---Wrapper client ---*/
+.wrapper__client {
+  @include wrapper(12em, 14.25em);
+}
+
+.content__client {
+  & p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &--items {
+    padding-top: 1.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    & :hover {
+        @include transition(all 0.3s ease-in-out);
+        transform: scale(1.1);
+        & > img {
+            @extend :hover;
+        }
+      }
+    &-logo {
+      border: $silver 1px solid;
+      width: 255px;
+      height: 160px;
+      margin: 24px;
+
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+     
+    }
+  }
+}

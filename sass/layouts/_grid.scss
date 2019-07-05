@@ -1,17 +1,3 @@
-// Navbar
-.navbar {
-  @extend %centerer;
-  &__menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-// Carousel
-.swiper-slide {
-  @extend %centerer;
-  @extend %column;
-}
 // Wrapper
 .wrapper {
   @extend %centerer;
@@ -22,6 +8,9 @@
   &__pricing {
     @extend %center;
     @extend %wrap;
+  }
+  &__news {
+    @extend %column;
   }
 }
 // Content
@@ -40,28 +29,31 @@
     &-right {
       @extend %flex;
       @extend %wrap;
+      @extend %justify-content-center;
     }
     &-left {
       @extend %center;
       @extend %align-items-end;
     }
   }
-}
-// Divider
-.divider {
-  @extend %centerer;
-}
-// Title
-.title {
-  @extend %centerer;
-  & > h3 {
-    @extend %centerer-right;
+  &__gallery {
+    @extend %centerer;
+    @extend %column;
+  }
+  &__news {
+    @extend %centerer;
+    @extend %column;
+    &--icon {
+      @extend %center;
+    }
+  }
+  &__blog {
+    @extend %flex;
+    @extend %wrap;
+    @extend %justify-content-center;
   }
 }
-// Icon
-.icon {
-  @extend %centerer;
-}
+
 // Team
 .team__columns {
   @extend %center;
@@ -72,6 +64,17 @@
 // Stats
 .stats__columns {
   @extend %center;
+}
+.stats__count--minify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Service
+.service__column {
+  @extend %centerer;
+  @extend %column;
 }
 
 // Pricing
@@ -100,12 +103,7 @@
 
 // Gallery
 .gallery__columns {
-  //for mobil : @extend %center;
   @extend %justify-content-end;
-}
-.content__gallery {
-  @extend %centerer;
-  @extend %column;
 }
 .gallery__overlay {
   &--image {
@@ -114,4 +112,46 @@
   &--zoom-circle {
     @extend %centerer;
   }
+}
+
+// Blog
+.blog__thumbnail {
+  @extend %flex;
+  @extend %column;
+  & span {
+    @extend %centerer;
+  }
+  &--text {
+    @extend %flex;
+  }
+}
+
+// Navbar
+.navbar {
+  @extend %centerer;
+  &__menu {
+    @extend %flex;
+    @extend %justify-content-space-between;
+    @extend %align-items-center;
+  }
+}
+// Carousel
+.swiper-slide {
+  @extend %centerer;
+  @extend %column;
+}
+// Divider
+.divider {
+  @extend %centerer;
+}
+// Title
+.title {
+  @extend %centerer;
+  & > h3 {
+    @extend %centerer-right;
+  }
+}
+// Icon
+.icon {
+  @extend %centerer;
 }

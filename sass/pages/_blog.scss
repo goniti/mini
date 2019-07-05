@@ -1,0 +1,62 @@
+// /*---Wrapper---*/
+.wrapper__blog {
+  @include wrapper(6.15em, 2.7em);
+}
+
+.content__blog {
+  width: 65vw;
+  & .title {
+    min-width: 100vw;
+  }
+}
+
+.blog {
+  &__thumbnail {
+    max-width: 555px;
+    margin-left: 60px;
+    & img {
+        width: 555px;
+        height: 300px;
+    }
+    & span {
+      height: 45px;
+      width: 45px;
+      background-color: orange;
+      margin-top: -45px;
+      margin-left: 66px;
+      color: $white;
+      & > .svg-inline--fa {
+        height: 1.5em;
+        cursor: auto;
+        color: white;
+      }
+    }
+    & figcaption {
+      background-color: #fff;
+      margin-bottom: 3.7rem;
+    }
+    &--title {
+      padding: 30px 20px 30px 20px;
+      margin-top: -60px;
+      background-color: $white;
+      margin-left: 20%;
+    }
+    &--text {
+      padding-bottom: 26px;
+      & p:first-child {
+        font-size: 14px;
+        width: 18%;
+        text-align: right;
+      }
+      & p:last-child {
+        font-size: 1rem;
+        width: 82%;
+        padding-left: 40px;
+      }
+    }
+    & a {
+      margin-left: 24.5%;
+      width: 3.4375rem;
+    }
+  }
+}

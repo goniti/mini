@@ -1,5 +1,35 @@
 //initialize
 $(document).ready(function () {
+
+    /*test */
+    /* Animate progressBar*/
+    function progress(percent, $element) {
+        var progressBarWidth = percent * $element.width() / 100;
+        $element.find('div').animate({ width: progressBarWidth }, 500);
+    }
+
+    $(".wrapper.wrapper__about--part2").mouseover(function (event) {
+        progress(88, $('#progressbar__design-animated'));
+        progress(76, $('#progressbar__developement-animated'));
+        progress(81, $('#progressbar__wordpress-animated'));
+        progress(71, $('#progressbar__drupal-animated'));
+
+    });
+
+    /*animate Stats */
+    $(".section__stats").mouseenter(function (event) {
+        $('.stats__count').each(function () {
+            var $this = $(this);
+            jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                duration: 1000,
+                easing: 'swing',
+                step: function () {
+                    $this.text(this.Counter.toFixed(0));
+                }
+            });
+        });
+    });
+
     /*---------------------SLIDER PARAMETERS---------------------*/
     //--header Carousel
     let mainSwiper = new Swiper('.main__swiper-container', {

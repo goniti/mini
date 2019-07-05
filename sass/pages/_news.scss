@@ -1,0 +1,32 @@
+/*---Wrapper news ---*/
+.wrapper__news {
+  @include wrapper(14em, 14.25em);
+}
+
+.content__news {
+  max-width: 51.25rem;
+  & svg {
+    height: 2.2em;
+    width: 2em;
+    cursor: auto;
+  }
+ 
+  & p {
+    color: $white;
+    padding-top: 1.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 22px;
+    letter-spacing: 0.2px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 33px;
+  }
+  & span {
+    color: $orange;
+  }
+  & time {
+    font-size: 15px;
+    color: $silver;
+    font-style: italic;
+  }
+}

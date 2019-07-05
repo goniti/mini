@@ -1,50 +1,55 @@
-// Margin
-$margin-large: 4.1em;
-$margin-base: 2.75em;
-$margin-small: 2.1em;
-
 //  Colors
 $black: #0d0d0d;
 $grey: #737373;
+$matterhorn-light: #4c4c4c;
 $grey-divider: #e6e6e6;
 $darkgrey: #a6a6a6;
 $silver: #8c8c8c;
-$white: #ffffff;
+$white: #fff;
 $orange: #f39c12;
 $red: #e74c3c;
 $transparent: rgba(0, 0, 0, 0);
 
+// Title
+$title : $matterhorn-light;
+
+// Color for textes references
+$references : $white;
+
 // Colors for iPhone 8 & iPad Pro
 $device-silver: #e2e3e4;
 $device-silver-dark: darken($device-silver, 10%);
-$device-silver-panel: #fff;
+$device-silver-panel: $white;
 $device-gold: #f7e8dd;
 $device-gold-dark: darken($device-gold, 20%);
-$device-gold-panel: #fff;
+$device-gold-panel: $white;
 $device-spacegray: #9b9ba0;
 $device-spacegray-dark: darken($device-spacegray, 15%);
 $device-spacegray-panel: #222;
 // Colors for iPad Pro
 $device-rosegold: #facfc9;
 $device-rosegold-dark: darken($device-rosegold, 10%);
-$device-rosegold-panel: #fff;
+$device-rosegold-panel: $white;
+
+/*BURGER MENU COLOR */
+$color-none: $transparent;
+$dark-theme-color: $black;
+$light-theme-color: $white;
+$theme-color: $orange;
+
+//color menu
+$burgermenu-background: $light-theme-color;
+$burgermenu-color: $theme-color;
+$burgermenu-color-hover: $dark-theme-color;
 
 // Parameters for angledEdge
-$sections-large: about, team, service, portfolio;
-$sections-small: quote, stats, references;
+$sections-large: about, team, service, portfolio, blog, contact, footer;
+$sections-small: quote, stats, references, news, client, map;
 
-/*TEST */
-
-//COLOR
-$color-none: rgba(0, 0, 0, 0);
-$dark-theme-color: #1c1c1c;
-$light-theme-color: #fff;
-$theme-color: #4caf50;
-$theme-color1: rgba(243, 156, 18, 0.9);
-$theme-color2: #832161;
-$theme-color3: #f39c12;
-$theme-color4: #d72638;
-$accent-theme-color5: #fc448d;
+// Margin
+$margin-large: 4.1em;
+$margin-base: 2.75em;
+$margin-small: 2.1em;
 
 // BURGERMENU PARAMETERS */
 $burgermenu-size: 18.75rem;
@@ -52,13 +57,8 @@ $burgermenu-padding: 1.875rem;
 $burgermenu-offset: 2.8125rem;
 $burgermenu-line-spacing: 1.25rem;
 $burgermenu-offset-icon: 0.625rem;
-//color menu
-$burgermenu-background: $light-theme-color;
-$burgermenu-color: $theme-color3;
-$burgermenu-color-hover: $theme-color3;
-//position menu
-
-//Menu right
+//--Position MENU
+//-Menu right
 $burgermenu-right: -$burgermenu-size;
-//Menu left
+//-Menu left
 $burgermenu-left: $burgermenu-size;
