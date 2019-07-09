@@ -4,6 +4,9 @@
 }
 
 .content__client {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   & p {
     font-size: 30px;
     font-weight: bold;

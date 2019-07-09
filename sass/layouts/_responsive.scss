@@ -399,6 +399,11 @@ h2 {
     }
   }
 }
+.content__client {
+  @include media(portable) {
+    flex-direction: column;
+  }
+}
 .content__contact {
   @include media(portable) {
     flex-direction: row;

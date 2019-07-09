@@ -1,8 +1,16 @@
+#map {
+  height: 400px;
+  width: 100%;
+}
+.marker__poppup--title h6{
+  color: $orange;
+}
+
 // /*---Wrapper---*/
 .wrapper__footer {
-    @include wrapper(2em, 2em);
-  }
-  
+  @include wrapper(2em, 2em);
+}
+
 .content__footer {
   display: flex;
   width: 80vw;
@@ -10,15 +18,13 @@
   align-items: center;
   flex-wrap: wrap-reverse;
 }
-  .footer__copyright{
-    font-size: 14.5px;
-    text-transform: uppercase;
-    
-  }
+.footer__copyright {
+  font-size: 14.5px;
+  text-transform: uppercase;
+}
 
-  .footer__social {
-
-    & a {
-      padding: 0 10px;
-    }
+.footer__social {
+  & a {
+    padding: 0 10px;
   }
+}

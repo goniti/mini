@@ -1,0 +1,37 @@
+.blog__thumbnail--text {
+    flex-direction: column;
+}
+
+.blog__thumbnail--text p:first-child {
+
+    display: flex;
+    align-items: center;
+    
+        /* width: 80%; */
+
+ }
+ .blog__thumbnail--text p:last-child {
+    font-size: 1rem;
+    width: 82%;
+    /* padding-left: 40px; */
+}
+ .blog__thumbnail a {
+    /* margin-left: 24.5%; */
+    
+}
+.blog__thumbnail--title {
+    padding: 15px 20px 15px 20px;
+    margin-top: -45px;
+    background-color: #fff;
+    margin-left: 10%;
+}
+
+.blog__thumbnail span {
+    height: 45px;
+    width: 45px;
+    background-color: orange;
+    margin-top: -45px;
+    margin-left: 11px;
+    color: #fff;
+}
+ /* html delete br john doe 24 coment on span*/

@@ -2649,13 +2649,24 @@ h5 span {
   width: 2em;
 }
 
-/* line 2, ../sass/pages/_footer.scss */
+/* line 1, ../sass/pages/_footer.scss */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* line 5, ../sass/pages/_footer.scss */
+.marker__poppup--title h6 {
+  color: #f39c12;
+}
+
+/* line 10, ../sass/pages/_footer.scss */
 .wrapper__footer {
   padding-top: 2em;
   padding-bottom: 2em;
 }
 
-/* line 6, ../sass/pages/_footer.scss */
+/* line 14, ../sass/pages/_footer.scss */
 .content__footer {
   display: flex;
   width: 80vw;
@@ -2664,13 +2675,13 @@ h5 span {
   flex-wrap: wrap-reverse;
 }
 
-/* line 13, ../sass/pages/_footer.scss */
+/* line 21, ../sass/pages/_footer.scss */
 .footer__copyright {
   font-size: 14.5px;
   text-transform: uppercase;
 }
 
-/* line 21, ../sass/pages/_footer.scss */
+/* line 27, ../sass/pages/_footer.scss */
 .footer__social a {
   padding: 0 10px;
 }
