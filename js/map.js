@@ -26,10 +26,17 @@ function initMap() {
     var marker = L.marker([lat, lon],{ icon: myIcon }).addTo(mymap);
     marker.bindPopup(
         "<div class='marker__poppup'> <div class='marker__poppup--title'> <h6>Business</h6> </div> <div class='marker__poppup--numero'><p>Tel:+000000004</p> </div>  <div class='marker__poppup--name'>John joe</div>  </div> "
-        
         );
 }
 window.onload = function () {
     // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
     initMap();
 };
+
+
+// CUSTOM LOCA
+//     "Denver": { "lat": 39.757747, "lon": -105.003051 },
+//     "Kansas City": { "lat": 39.097224, "lon": -94.583927 },
+//     "Memphis": { "lat": 35.147765, "lon": -90.035370 },
+//     "Minneapolis": { "lat": 44.977231, "lon": -93.260837 }
+
