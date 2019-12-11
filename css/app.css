@@ -163,7 +163,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 80, ../sass/helpers/_placeholders.scss */
-.icon-lab, .icon-star, .icon-world {
+.icon-lab, .icon-world {
   margin: 2.1em;
 }
 
@@ -1474,7 +1474,7 @@ section {
   height: 150px;
   top: 85px;
   position: fixed;
-  z-index: 500;
+  z-index: 999;
   width: 100%;
   color: #fff;
   line-height: 0.1rem;
@@ -1482,18 +1482,18 @@ section {
   /* Safari */
   transition: height 0.5s, line-height 0.5s;
 }
-/* line 25, ../sass/components/_navbar.scss */
+/* line 17, ../sass/components/_navbar.scss */
 .navbar__items {
   display: none;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 600;
 }
-/* line 37, ../sass/components/_navbar.scss */
+/* line 26, ../sass/components/_navbar.scss */
 .navbar__items > span {
   padding: 0 2.25rem;
 }
-/* line 43, ../sass/components/_navbar.scss */
+/* line 32, ../sass/components/_navbar.scss */
 .navbar__link {
   -moz-transition-duration: 0.7s;
   -o-transition-duration: 0.7s;
@@ -1501,22 +1501,22 @@ section {
   transition-duration: 0.7s;
   letter-spacing: -1px;
 }
-/* line 47, ../sass/components/_navbar.scss */
+/* line 36, ../sass/components/_navbar.scss */
 .navbar__link-logo {
   padding-left: 4.0625rem;
 }
-/* line 51, ../sass/components/_navbar.scss */
+/* line 40, ../sass/components/_navbar.scss */
 .navbar__link--is-active, .navbar__link:hover, .content__client--items :hover > img.navbar__link {
   color: #0d0d0d;
 }
-/* line 59, ../sass/components/_navbar.scss */
+/* line 48, ../sass/components/_navbar.scss */
 .navbar__menu {
   width: 95%;
   height: inherit;
   position: relative;
   margin-left: 2.5rem;
 }
-/* line 73, ../sass/components/_navbar.scss */
+/* line 57, ../sass/components/_navbar.scss */
 .navbar__menu--title {
   font-size: 16px;
   -moz-transition: all 0.6s ease-in-out;
@@ -1524,12 +1524,12 @@ section {
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
 }
-/* line 86, ../sass/components/_navbar.scss */
+/* line 65, ../sass/components/_navbar.scss */
 .navbar__menu--side-right {
   right: 1rem;
   position: absolute;
 }
-/* line 94, ../sass/components/_navbar.scss */
+/* line 72, ../sass/components/_navbar.scss */
 .navbar__menu-background {
   top: 0;
   background: #f39c12;
@@ -1540,7 +1540,7 @@ section {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 102, ../sass/components/_navbar.scss */
+/* line 80, ../sass/components/_navbar.scss */
 .navbar__menu-scrolled {
   padding-left: 0;
   margin-top: 0;
@@ -1548,14 +1548,14 @@ section {
   height: 60px !important;
   line-height: 0.1rem !important;
 }
-/* line 121, ../sass/components/_navbar.scss */
+/* line 94, ../sass/components/_navbar.scss */
 .navbar__menu-scrolled .logo-mini {
   line-height: 0.1rem;
   width: 3.0625rem;
   height: 3.0625rem;
   font-size: 1rem;
 }
-/* line 127, ../sass/components/_navbar.scss */
+/* line 100, ../sass/components/_navbar.scss */
 .navbar__menu-scrolled h1 {
   font-size: 16px;
 }
@@ -2324,7 +2324,7 @@ h5 span {
   justify-content: center;
   z-index: 1000;
 }
-/* line 146, ../sass/pages/_portfolio.scss */
+/* line 147, ../sass/pages/_portfolio.scss */
 .overlay__inner {
   background: white;
   width: 50em;
@@ -2332,7 +2332,7 @@ h5 span {
   position: relative;
   opacity: 1;
 }
-/* line 152, ../sass/pages/_portfolio.scss */
+/* line 153, ../sass/pages/_portfolio.scss */
 .overlay__inner > .close {
   position: absolute;
   top: 3px;
@@ -2346,11 +2346,11 @@ h5 span {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-/* line 164, ../sass/pages/_portfolio.scss */
+/* line 165, ../sass/pages/_portfolio.scss */
 .overlay__inner > .close:hover, .content__client--items .overlay__inner:hover > img.close {
   color: #f39c12;
 }
-/* line 168, ../sass/pages/_portfolio.scss */
+/* line 169, ../sass/pages/_portfolio.scss */
 .overlay__inner > img {
   max-width: 50em;
 }
