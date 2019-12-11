@@ -1,20 +1,12 @@
 // Navbar
 .navbar {
-
-
-// responsiv test
-height: 150px;
-top: 85px;
-//--------------
-
-
-
-
+  // responsiv test
+  height: 150px;
+  top: 85px;
+  //--------------
 
   position: fixed;
- 
-  z-index: 500;
- 
+  z-index: 999;
   width: 100%;
   color: $light-theme-color;
   line-height: 0.1rem;
@@ -23,12 +15,9 @@ top: 85px;
   transition: height 0.5s, line-height 0.5s;
   //--Navbar__Items
   &__items {
-
     //responsiv test
     display: none;
     //------------
-
-
 
     text-transform: uppercase;
     font-size: 18px;
@@ -57,30 +46,20 @@ top: 85px;
   }
   //--Navbar__menu
   &__menu {
-
-//responsiv test
+    //responsiv test
     width: 95%;
-//--------------
-
-
-
-
+    //--------------
 
     height: inherit;
     position: relative;
     margin-left: 2.5rem;
     // Style of title navbar
     &--title {
-
-//responsiv test
-font-size: 16px;
-//-----------
-
-
-
+      //responsiv test
+      font-size: 16px;
+      //-----------
 
       @include transition(all 0.6s ease-in-out);
-   
     }
 
     &--side-right {
@@ -88,7 +67,6 @@ font-size: 16px;
       right: 1rem;
       //-------------
       position: absolute;
-      
     }
     // Add background of navigation bar on first scroll
     &-background {
@@ -100,24 +78,19 @@ font-size: 16px;
     }
     // Reduce navigation bar on scroll
     &-scrolled {
+      // responsiv test
+      padding-left: 0;
 
-// responsiv test
-padding-left: 0;
+      // add on test
+      margin-top: 0;
+      //
 
-// add on test
-margin-top: 0;
-// 
-
-//------------
-
-
-
-
+      //------------
 
       position: fixed;
       height: 60px !important;
       line-height: 0.1rem !important;
-     
+
       .logo-mini {
         line-height: 0.1rem;
         width: 3.0625rem;
