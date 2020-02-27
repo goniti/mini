@@ -1306,7 +1306,7 @@ section {
   box-shadow: 4px 0 5px 0 rgba(0, 0, 0, 0.14), 1px 0 10px 0 rgba(0, 0, 0, 0.12), 2px 0 4px -1px rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
-  z-index: 500;
+  z-index: 700;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -1474,7 +1474,7 @@ section {
   height: 150px;
   top: 85px;
   position: fixed;
-  z-index: 999;
+  z-index: 600;
   width: 100%;
   color: #fff;
   line-height: 0.1rem;
