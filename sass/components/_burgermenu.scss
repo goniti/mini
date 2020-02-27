@@ -9,7 +9,7 @@
   box-shadow: 4px 0 5px 0 rgba(0, 0, 0, 0.14), 1px 0 10px 0 rgba(0, 0, 0, 0.12), 2px 0 4px -1px rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
-  z-index: 500;
+  z-index: 700;
 
   // Menu: styles
   @include transition-mix();
